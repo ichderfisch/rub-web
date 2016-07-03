@@ -3,7 +3,6 @@ node_modules
 vendor
 
 # SASS Files
-public/css
 public/scss/.sass-cache
 
 # Windows stuff
