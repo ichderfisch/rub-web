@@ -1,0 +1,21 @@
+{
+  "name": "rub-web",
+  "description": "RUB Web",
+  "main": "public/index.html",
+  "keywords": [
+    "RUB"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.1",
+    "superfish": "1.5.0"
+  }
+}

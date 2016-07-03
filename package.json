@@ -1,0 +1,16 @@
+{
+  "name": "rub-scss",
+  "version": "0.0.1",
+  "description": "RUB Web",
+  "main": "index.html",
+  "scripts": {
+  },
+  "keywords": [
+    "RUB, Ruhr-Universität Bochum, SASS"
+  ],
+  "author": "Dennis Fischer",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1"
+  }
+}

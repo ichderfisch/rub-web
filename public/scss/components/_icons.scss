@@ -1,0 +1,47 @@
+a[href $='.pdf'] {
+    padding-right: 1.5em;
+    background: transparent url(../images/icons/pdf.gif) no-repeat center right;
+}
+
+a[href $='.doc'],
+a[href $='.docx'] { 
+    padding-right: 1.5em;
+    background: transparent url(../images/icons/doc.gif) no-repeat center right;
+}
+
+a[href $='.xls'],
+a[href $='.xlsx']{ 
+    padding-right: 1.5em;
+    background: transparent url(../images/icons/xls.gif) no-repeat center right;
+}
+
+a[href $='.zip'] { 
+    padding-right: 1.5em;
+    background: transparent url(../images/icons/zip.gif) no-repeat center right;
+}
+
+a.popup {
+    padding-right: 1.5em;
+    background: transparent url(../images/icons/popup.gif) no-repeat center right;
+}
+
+a.print {
+    padding-right: 1.5em;
+    background: transparent url(../images/icons/print.gif) no-repeat center right;
+}
+
+p a[href ^="mailto:"],
+ul a[href ^="mailto:"],
+td a[href ^="mailto:"],
+ul.liste_mit_typangaben a[href ^="mailto:"] {
+    padding-right: 1.5em;
+    background: transparent url(../images/icons/mailtosw.gif) no-repeat center right;
+}
+
+ul.liste_mit_typangaben a[href $='.html'] { 
+    padding-left: 1.5em;
+    background: transparent url(../images/icons/pfeil-gruen-klein.gif) no-repeat center left;
+}
+
+.extern {padding-right: 1.5em;
+   background: transparent url(../images/icons/external.gif) no-repeat center right;}

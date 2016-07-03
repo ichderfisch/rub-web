@@ -1,0 +1,62 @@
+body { 
+    background: $page-bg none; 
+    padding: 0 0 10px 0; 
+}
+
+.page_margins { 
+    background: $white; 
+    margin: 0 auto; 
+    width: 960px; 
+}
+
+#main { 
+    margin: 10px 0; 
+    background: $white; 
+    z-index:99
+}
+
+#inhalt {
+    margin:0 10px;
+
+    h2 {
+        border-top: 2px solid $rub-blue;
+        color: $font-color;
+        padding: 0.3125em 0 0.625em;
+        font-weight: normal;
+    }
+
+    h3 {
+	    font-weight: normal;
+    }
+
+    img {
+        margin-bottom: 0.5em;
+    }
+}
+
+.page_margins {
+border: 0 none;
+box-shadow: 0 0 10px $black;
+}
+
+.page {
+border: 0 none; 
+// margin: 0 0 0 5px; 
+// padding: 0px 5px 10px 0px;
+}
+  
+  #ueberschrift {
+	padding: 1em 0 0.5em 0;
+}
+
+
+.ueberschrift-wie-marginalspalte {
+  background-color: $white-green;
+    border-top: 2px solid #709108;
+    color: $rub-blue;
+    font-size: 100%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 5px;
+  }
+

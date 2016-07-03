@@ -1,0 +1,23 @@
+ul.angebote {
+    margin: 0;
+    padding: 0;
+}
+ul.angebote li {
+    border-bottom: 1px solid #CCCCCC;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+}
+ul.angebote li a:link, ul.angebote li a:visited {
+	background: url("../../images/backgrounds/bg-angebote.gif") repeat-x scroll left top transparent;
+	color: #585858;
+	display: block;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 2em;
+	padding: 0 10px;
+}
+ul.angebote li a:hover {
+    background-color: #f2f2f2 !important;
+    color: #003560;
+}

@@ -1,0 +1,17 @@
+# Node.js and Bower
+node_modules
+vendor
+
+# SASS Files
+public/css
+public/scss/.sass-cache
+
+# Windows stuff
+Thumbs.db
+
+# Some CodeKit stuff
+.codekit-cache
+config.codekit
+
+# old Stuff
+old

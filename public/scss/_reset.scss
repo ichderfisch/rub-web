@@ -1,0 +1,91 @@
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) YAML core stylesheet
+ * (de) YAML Basis-Stylesheet
+ *
+ * Don't make any changes in this file!
+ * Your changes should be placed in any css-file in your own stylesheet folder.
+ *
+ * @copyright       Copyright 2005-2011, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.3.1
+ * @revision        $Revision: 501 $
+ * @lastmodified    $Date: 2011-06-18 17:27:44 +0200 (Sa, 18 Jun 2011) $
+ */
+
+@media all
+{
+ /**
+  * @section browser reset
+  * @see     http://www.yaml.de/en/documentation/css-components/base-stylesheet.html
+  */
+
+  /* (en) Global reset of paddings and margins for all HTML elements */
+  /* (de) Globales Zurücksetzen der Innen- und Außenabstände für alle HTML-Elemente */
+  * { margin:0; padding:0; }
+
+  /* (en) Correction:margin/padding reset caused too small select boxes. */
+  /* (de) Korrektur:Das Zurücksetzen der Abstände verursacht zu kleine Selectboxen. */
+  option { padding-left:0.4em; } /* LTR */
+  select { padding:1px; }
+
+ /**
+  * (en) Global fix of the Italics bugs in IE 5.x and IE 6
+  * (de) Globale Korrektur des Italics Bugs des IE 5.x und IE 6
+  *
+  * @bugfix
+  * @affected   IE 5.x/Win, IE6
+  * @css-for    IE 5.x/Win, IE6
+  * @valid      yes
+  */
+  * html body * { overflow:visible; }
+
+  body {
+    /* (en) Fix for rounding errors when scaling font sizes in older versions of Opera browser */
+    /* (de) Beseitigung von Rundungsfehler beim Skalieren von Schriftgrößen in älteren Opera Versionen */
+    font-size:100.01%;
+
+    /* (en) Standard values for colors and text alignment */
+    /* (de) Vorgabe der Standardfarben und Textausrichtung */
+    background:#fff;
+    color:#000;
+    text-align:left; /* LTR */
+  }
+
+  /* (en) avoid visible outlines on DIV containers in Webkit browsers */
+  /* (de) Vermeidung sichtbarer Outline-Rahmen in Webkit-Browsern */
+  div { outline:0 none; }
+
+  /* (en) HTML 5 - adjusting visual formatting model to block level */
+  /* (en) HTML 5 - Anpassung des visuellen Formatmodells auf Blockelemente */
+  article,aside,canvas,details,figcaption,figure,
+  footer,header,hgroup,menu,nav,section,summary { 
+  	display:block;
+  }
+  
+  /* (en) Clear borders for <fieldset> and <img> elements */
+  /* (de) Rahmen für <fieldset> und <img> Elemente löschen */
+  fieldset, img { border:0 solid; }
+
+  /* (en) new standard values for lists, blockquote and cite */
+  /* (de) Neue Standardwerte für Listen & Zitate */
+  ul, ol, dl { margin:0 0 1em 1em; } /* LTR */
+  li {
+    line-height:1.5em;
+    margin-left:0.8em; /* LTR */
+  }
+
+  dt { font-weight:bold; }
+  dd { margin:0 0 1em 0.8em; } /* LTR */
+
+  blockquote { margin:0 0 1em 0.8em; } /* LTR */
+
+  blockquote:before, blockquote:after,
+  q:before, q:after { content:""; }
+
+
+}

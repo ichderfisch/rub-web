@@ -1,0 +1,58 @@
+#footer {
+    background: #f9f9f9;
+    border-top: 5px #efefef solid;
+    color:#666;
+    padding: 10px 0px;
+
+    a {
+        color: #6b6b6b;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+	.subcolumns {
+		padding-top: 10px;
+	}
+}
+
+#footer .subcl, 
+#footer .subc,
+#footer .subcr {
+	font-size: 0.9em;
+	color: #6b6b6b;
+	padding-left:10px;
+}
+
+#umschaltung, #sprache { text-align:right; }
+#umschaltung {
+  	padding-right: 10px;
+}
+
+.fusszeile {
+	border-top: 1px solid #efefef;
+}
+
+#druckversion,
+#normalversion,
+#kontrastversion {
+	a {
+		background-position:	left;
+		background-repeat:		no-repeat;
+		padding-left: 1.5em;
+	}
+}
+
+#druckversion a {
+  	background-image:		url(../images/icons/drucken.gif);
+}
+
+#normalversion a {
+	display: 				none;
+  	background-image:		url(../images/icons/kontrast.gif);
+}
+
+#kontrastversion a {
+  	background-image:		url(../images/icons/kontrast.gif);
+}

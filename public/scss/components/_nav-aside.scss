@@ -1,0 +1,72 @@
+#seitennavigation {
+	background: $white;
+	
+	h3 {
+		border-top: 2px solid $rub-green-alternative;
+		color: $rub-blue;
+		padding: 0.3125em 0 0.625em;
+		font-weight:normal;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0 0 1.5em 0;
+		border-top: 2px solid $rub-green-alternative;
+		border-bottom: 1px solid #ccc;
+		
+		li {
+			position: relative;
+			margin: 0 !important;
+		
+			a { 
+				display: block; 
+			}
+
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			border-bottom: none;
+			border-top: none;
+			background-color: $white;
+
+			li a {
+				margin-left: 0.75em;
+			}
+
+			ul li a {
+				margin-left: 1.5em; 
+			}
+		}
+	}
+
+	a {
+		&:hover {
+			background-color: $white-green;
+			text-decoration: none;
+		}
+
+		&:link,
+		&:visited {
+			background-image:	url(../images/navigation/pfeil-rechts2.gif);
+			background-position: 0.25em 50%;
+			background-repeat:	no-repeat;
+			border-top:	1px solid #ccc;
+			color: $rub-blue;
+			padding: 0.25em 0.25em 0.25em 1em;
+			text-decoration: none;
+		}
+	}
+
+}
+
+.aktiverlink {
+	background-color: $white-green;  
+	font-weight: bold !important;
+}
+
+a.aktivebox_ueberschrift {
+	font-weight: bold !important;
+	background-color: $white-green;
+}
