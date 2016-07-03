@@ -4,7 +4,7 @@ This repository is a private fork of [public available CD Templates](http://www.
 
 Using SASS instead of VanillaCSS.
 
-Feel free to use and improve.
+Feel free to improve. Don't use on productive sites, unless you know what you are doing.
 
 ## How to install
 
@@ -33,7 +33,7 @@ Dropped IE 6-9 Support!
 
 ## To Do
 
-- [ ] generell rewrite of CSS
+- [ ] generell rewrite and improve of CSS
 - [ ] recreate high-contrast view  
 - [ ] recreate print view  
 - [ ] add slider ([jquery.Cylce](http://jquery.malsup.com/cycle/))
