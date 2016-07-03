@@ -1,5 +1,7 @@
 # RUB Webdesign (2012)
 
+[![Build Status](https://travis-ci.org/ichderfisch/rub-web.svg?branch=master)](https://travis-ci.org/ichderfisch/rub-web)
+
 This repository is a private fork of [public available CD Templates](http://www.ruhr-uni-bochum.de/cd/cd-2016/web.html) of Ruhr-Universität Bochum.
 
 Using SASS instead of VanillaCSS.
