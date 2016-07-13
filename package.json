@@ -1,16 +1,17 @@
 {
-  "name": "rub-scss",
-  "version": "0.0.1",
-  "description": "RUB Web",
+  "name": "rub-web-sass",
+  "version": "0.0.3",
+  "description": "RUB Webdesign 2012 using SASS",
   "main": "index.html",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "RUB, Ruhr-Universität Bochum, SASS"
   ],
   "author": "Dennis Fischer",
   "devDependencies": {
     "bower": "^1.7.9",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
   }
 }

@@ -40,9 +40,7 @@ Dropped IE 6-9 Support!
 - [ ] recreate print view  
 - [ ] add slider ([jquery.Cylce](http://jquery.malsup.com/cycle/))
 - [ ] add documentation
-- [ ] Add Gulp or Grunt building scripts (I actually prefer [CodeKit](https://incident57.com/codekit/) over these tools, anyway, need to add them)
 - [ ] Clean up images-folder
-- [ ] Add Social-Media-Classes to footer
 
 ## Author
 Dennis Fischer (ichderfisch)  
