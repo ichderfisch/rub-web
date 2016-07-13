@@ -17,12 +17,12 @@ body {
     margin: 0 0 0.25em 0;
   }
 
-  h1 { font-size: 2.5em; }                       /* 30px */
-  h2 { font-size: 1.75em; }                      /* 22px */
-  h3 { font-size: 1.5em; }                       /* 18px */
-  h4 { font-size: 1.3333333em; }                 /* 16px */
-  h5 { font-size: 1.1677777em; }                 /* 14px */
-  h6 { font-size: 1.1677777em; }                 /* 14px */
+  h1 { font-size: $font-size-3xl; }                       /* 30px */
+  h2 { font-size: $font-size-2xl; }                      /* 22px */
+  h3 { font-size: $font-size-xl }                       /* 18px */
+  h4 { font-size: $font-size-la }                 /* 16px */
+  h5 { font-size: $font-size-md }                 /* 14px */
+  h6 { font-size: $font-size-md  }                 /* 14px */
 
   /* --- Lists | Listen  -------------------------------------------------------------------------------- */
   ul, ol, dl { line-height:1.5em; margin:0 0 1em 1em; }
@@ -166,7 +166,7 @@ body {
   table.full { width:100%; }
   table.fixed { table-layout:fixed; }
 
-  th,td { padding:0.5em; }
+  th,td { padding:0.5em; vertical-align: top; }
   thead th { color:#000; border-bottom:2px #800 solid; }
   tbody th { background:#f2f2f2; color:#333; }
   tbody th[scope="row"], tbody th.sub { background:#f0f0f0; }
