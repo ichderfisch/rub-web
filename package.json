@@ -2,6 +2,7 @@
   "name": "rub-web-sass",
   "version": "0.0.3",
   "description": "RUB Webdesign 2012 using SASS",
+  "repository":  "github:ichderfisch/rub-web",
   "main": "index.html",
   "scripts": {},
   "keywords": [
