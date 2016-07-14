@@ -1,6 +1,7 @@
 ul.angebote {
     margin: 0;
     padding: 0;
+    list-style-image:none;
 }
 ul.angebote li {
     border-bottom: 1px solid #CCCCCC;
@@ -9,7 +10,7 @@ ul.angebote li {
     margin: 0;
 }
 ul.angebote li a:link, ul.angebote li a:visited {
-	background: url("../../images/backgrounds/bg-angebote.gif") repeat-x scroll left top transparent;
+	background: url("../images/backgrounds/bg-angebote.gif") repeat-x scroll left top transparent;
 	color: #585858;
 	display: block;
 	font-weight: bold;

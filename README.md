@@ -22,7 +22,7 @@ This repository does not have any dreamweaver or other template files, as the or
 
 After building simply add the ``main.css`` or ``main.min.css`` to your html-templates. No more need for handling several different CSS-files.
 
-A major diffrence with the original templates is the usage of new classes on ``<body>``.
+A major difference with the original templates is the usage of new classes on ``<body>``.
 
 - ``<body class="one-col">`` for a single column layout
 - ``<body class="two-col-nav-aside">`` for a two column layout with the left navigation bar
@@ -35,10 +35,9 @@ Dropped IE 6-9 Support!
 
 ## To Do
 
-- [ ] generell rewrite and improve of CSS
+- [ ] general rewrite and improve of CSS
 - [ ] recreate high-contrast view  
-- [ ] recreate print view  
-- [ ] add slider ([jquery.Cylce](http://jquery.malsup.com/cycle/))
+- [ ] recreate print view
 - [ ] add documentation
 - [ ] Clean up images-folder
 
