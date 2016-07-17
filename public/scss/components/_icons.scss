@@ -1,47 +1,92 @@
-a[href $='.pdf'] {
+%icon-position {
     padding-right: 1.5em;
-    background: transparent url(../images/icons/pdf.gif) no-repeat center right;
+    background: transparent no-repeat center right;
 }
 
-a[href $='.doc'],
-a[href $='.docx'] { 
-    padding-right: 1.5em;
-    background: transparent url(../images/icons/doc.gif) no-repeat center right;
+p,
+ul {
+    a[href $='.pdf'] {
+        @extend %icon-position;
+        background-image: url(../images/icons/pdf.gif);
+    }
+
+    a[href $='.doc'],
+    a[href $='.docx'] {
+        @extend %icon-position;
+        background-image: url(../images/icons/doc.gif);
+    }
+
+    a[href $='.xls'],
+    a[href $='.xlsx']{
+        @extend %icon-position;
+        background-image: url(../images/icons/xls.gif);
+    }
+
+    a[href $='.zip'] {
+        @extend %icon-position;
+        background-image: url(../images/icons/zip.gif);
+    }
+
+    a.popup {
+        @extend %icon-position;
+        background-image: url(../images/icons/popup.gif);
+    }
+
+    a.print {
+        @extend %icon-position;
+        background-image: url(../images/icons/print.gif);
+    }
+
+    .extern {
+        @extend %icon-position;
+        background-image: url(../images/icons/external.gif)
+    }
+
+    a[href ^="mailto:"] {
+        @extend %icon-position;
+        background-image: url(../images/icons/mailtosw.gif);
+    }
+
 }
 
-a[href $='.xls'],
-a[href $='.xlsx']{ 
-    padding-right: 1.5em;
-    background: transparent url(../images/icons/xls.gif) no-repeat center right;
-}
 
-a[href $='.zip'] { 
-    padding-right: 1.5em;
-    background: transparent url(../images/icons/zip.gif) no-repeat center right;
-}
-
-a.popup {
-    padding-right: 1.5em;
-    background: transparent url(../images/icons/popup.gif) no-repeat center right;
-}
-
-a.print {
-    padding-right: 1.5em;
-    background: transparent url(../images/icons/print.gif) no-repeat center right;
-}
-
-p a[href ^="mailto:"],
-ul a[href ^="mailto:"],
-td a[href ^="mailto:"],
-ul.liste_mit_typangaben a[href ^="mailto:"] {
-    padding-right: 1.5em;
-    background: transparent url(../images/icons/mailtosw.gif) no-repeat center right;
-}
-
-ul.liste_mit_typangaben a[href $='.html'] { 
+ul.liste_mit_typangaben a[href $='.html'] {
     padding-left: 1.5em;
     background: transparent url(../images/icons/pfeil-gruen-klein.gif) no-repeat center left;
 }
 
-.extern {padding-right: 1.5em;
-   background: transparent url(../images/icons/external.gif) no-repeat center right;}
+.link-englisch {
+    @extend %icon-position;
+    background-image: url(../images/icons/fl_english.gif);
+}
+
+.link-deutsch {
+    @extend %icon-position;
+    background-image: url(../images/icons/fl_deutsch.gif);
+}
+
+.link-extern {
+    @extend %icon-position;
+    background-image: url(../images/icons/external.gif);
+}
+
+.link-extern-deutsch,
+.link-extern-englisch {
+    padding-right: 2.75em;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.link-extern-englisch {
+   background-image: url(../images/icons/extern-englisch.gif);
+}
+
+.link-extern-deutsch {
+   background-image: url(../images/icons/extern-deutsch.gif);
+}
+
+.link-weiterlesen {
+  	background:url(../images/navigation/pfeil-rechts2.gif) no-repeat center left;
+  	padding-left: 1.5em;
+}
