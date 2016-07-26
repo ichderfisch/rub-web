@@ -37,7 +37,6 @@ $(document).ready(function() {
 });
 
 $(document).ready(function(){
-
   $('#rub-slider_control').show();
   $('#rub-slider_outer').show();
 });
