@@ -1,49 +1,54 @@
-%icon-position {
-    padding-right: 1.5em;
-    background: transparent no-repeat center right;
-}
+#main {
+    a[href $='.pdf'],
+    a[href $='.doc'],
+    a[href $='.docx'],
+    a[href $='.xls'],
+    a[href $='.xlsx'],
+    a[href $='.zip'],
+    .popup,
+    .print,
+    .link--extern,
+    a[href ^="mailto:"],
+    .link--englisch,
+    .link--deutsch,
+    .extern {
+        padding-right: 1.5em;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-position: center right;
+    }
 
-p,
-ul {
     a[href $='.pdf'] {
-        @extend %icon-position;
         background-image: url(../images/icons/pdf.gif);
     }
 
     a[href $='.doc'],
     a[href $='.docx'] {
-        @extend %icon-position;
         background-image: url(../images/icons/doc.gif);
     }
 
     a[href $='.xls'],
-    a[href $='.xlsx']{
-        @extend %icon-position;
+    a[href $='.xlsx'] {
         background-image: url(../images/icons/xls.gif);
     }
 
     a[href $='.zip'] {
-        @extend %icon-position;
         background-image: url(../images/icons/zip.gif);
     }
 
-    a.popup {
-        @extend %icon-position;
+    .popup {
         background-image: url(../images/icons/popup.gif);
     }
 
-    a.print {
-        @extend %icon-position;
+    .print {
         background-image: url(../images/icons/print.gif);
     }
 
-    .extern {
-        @extend %icon-position;
+    .link--extern {
         background-image: url(../images/icons/external.gif)
     }
 
     a[href ^="mailto:"] {
-        @extend %icon-position;
         background-image: url(../images/icons/mailtosw.gif);
     }
 
@@ -55,19 +60,12 @@ ul.liste_mit_typangaben a[href $='.html'] {
     background: transparent url(../images/icons/pfeil-gruen-klein.gif) no-repeat center left;
 }
 
-.link-englisch {
-    @extend %icon-position;
+.link--englisch {
     background-image: url(../images/icons/fl_english.gif);
 }
 
-.link-deutsch {
-    @extend %icon-position;
+.link--deutsch {
     background-image: url(../images/icons/fl_deutsch.gif);
-}
-
-.link-extern {
-    @extend %icon-position;
-    background-image: url(../images/icons/external.gif);
 }
 
 .link-extern-deutsch,
@@ -86,7 +84,7 @@ ul.liste_mit_typangaben a[href $='.html'] {
    background-image: url(../images/icons/extern-deutsch.gif);
 }
 
-.link-weiterlesen {
+.link--weiterlesen {
   	background:url(../images/navigation/pfeil-rechts2.gif) no-repeat center left;
   	padding-left: 1.5em;
 }
