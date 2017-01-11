@@ -1,12 +1,23 @@
 'use strict';
 
 var gulp = require('gulp');
+
+// CSS & JS
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');
+
+// Dev-Server
+var webserver = require('gulp-connect');
 var livereload = require('gulp-livereload');
 
+gulp.task('webserver', function() {
+  webserver.server({
+    root: 'public',
+    livereload: true
+  });
+});
 
 gulp.task('js:scripts', function () {
   return gulp.src([
