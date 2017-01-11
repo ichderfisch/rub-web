@@ -1,6 +1,6 @@
 {
   "name": "rub-web",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "RUB Webdesign 2012 using SASS",
   "repository": "github:ichderfisch/rub-web-layout",
   "main": "index.html",
