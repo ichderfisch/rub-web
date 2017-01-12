@@ -34,14 +34,6 @@ A major difference with the original templates is the usage of new classes on ``
 
 Dropped IE 6-9 Support!
 
-## To Do
-
-- [ ] general rewrite and improve of CSS
-- [ ] recreate high-contrast view  
-- [ ] recreate print view
-- [ ] add documentation
-- [ ] Clean up images-folder
-
 ## Author
 Dennis Fischer (ichderfisch)  
 [Github](https://github.com/ichderfisch/)  
