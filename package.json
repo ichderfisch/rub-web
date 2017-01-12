@@ -1,6 +1,6 @@
 {
   "name": "rub-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "RUB Webdesign 2012 using SASS",
   "repository": "github:ichderfisch/rub-web-layout",
   "main": "index.html",
@@ -18,13 +18,5 @@
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0"
-  },
-  "configs": {
-    "directories": {
-      "archive": "archive",
-      "dist": "dist",
-      "src": "src",
-      "test": "test"
-      }
   }
 }

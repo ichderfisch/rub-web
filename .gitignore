@@ -2,9 +2,8 @@
 node_modules
 vendor
 
-# SASS Files
-public/css
-public/scss/.sass-cache
+# Public Files
+public/*
 
 # Windows stuff
 Thumbs.db
@@ -12,6 +11,3 @@ Thumbs.db
 # Some CodeKit stuff
 .codekit-cache
 config.codekit
-
-# old Stuff
-old
