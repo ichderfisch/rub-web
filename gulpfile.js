@@ -71,7 +71,9 @@ gulp.task('copy:misc', function(){
 
         // Not needed in build
         '!private/vendor/',
-        '!private/vendor/**/*'
+        '!private/vendor/**/*',
+        '!private/doc/',
+        '!private/doc/**/*'
     ])
     .pipe(gulp.dest('./public/'));
 });
@@ -92,9 +94,9 @@ gulp.task('js:init', function () {
 
 gulp.task('js:scripts', function () {
     return gulp.src([
-        'vendor/jquery/dist/jquery.min.js',
-        'vendor/superfish/js/jquery.superfish-1.5.0.js',
-        'vendor/cycle/jquery.cycle.all.js',
+        'private/vendor/jquery/dist/jquery.min.js',
+        'private/vendor/superfish/js/jquery.superfish-1.5.0.js',
+        'private/vendor/cycle/jquery.cycle.all.js',
         'private/js/kontrast/kontrast.js'
     ])
     .pipe(concat('scripts.js'))
