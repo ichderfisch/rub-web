@@ -1,24 +1,83 @@
-@media print
-{
- /**
-  * (en) float clearing for subtemplates. Uses display:table to avoid bugs in FF & IE
-  * (de) Float Clearing für Subtemplates. Verwendet display:table, um Darstellungsprobleme im FF & IE zu vermeiden
-  */
+@media print {
+    /* Only Print the Content Area */
+    #header,
+    #footer,
+    #col1,
+    #col2 {
+        display: none
+    }
 
-  .subcolumns,
-  .subcolumns > div {
-    overflow:visible; 
-    display:table;
-  } 
+    /* HTML 5 Boilerplate */
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
 
-  /* (en) make .print class visible */
-  /* (de) .print-Klasse sichtbar schalten */
-  .print { 
-    position:static; 
-    left:0;
-  }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
 
-  /* (en) generic class to hide elements for print */
-  /* (de) Allgemeine CSS Klasse, um beliebige Elemente in der Druckausgabe auszublenden */
-  .noprint { display:none !important; }
+    /*
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    */
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }

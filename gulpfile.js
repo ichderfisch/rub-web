@@ -3,14 +3,17 @@
 var gulp = require('gulp');
 
 // CSS & JS
+var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-var cleanCSS = require('gulp-clean-css');
-var concat = require('gulp-concat');
 
 // Dev-Server
 var webserver = require('gulp-connect');
 var livereload = require('gulp-livereload');
+
+// For autoprefixer due to old version of Node and npm
+require('es6-promise').polyfill();
 
 /**
  *
@@ -21,6 +24,7 @@ var livereload = require('gulp-livereload');
  * copy:html
  * copy:misc
  * copy:license
+ * js
  * js:init
  * js:scripts
  * sass:build
@@ -30,7 +34,7 @@ var livereload = require('gulp-livereload');
  *
  **/
 
-gulp.task('build', ['copy', 'js:scripts', 'js:init', 'sass:build'], function (){
+gulp.task('build', ['copy', 'js', 'sass:build'], function (){
 });
 
 gulp.task('copy', ['copy:html', 'copy:images', 'copy:misc', 'copy:license'], function(){
@@ -74,49 +78,60 @@ gulp.task('copy:misc', function(){
 
 gulp.task('copy:license', function() {
     return gulp.src('LICENSE.txt')
-        .pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./public/'));
+});
+
+gulp.task('js', ['js:init', 'js:scripts'], function(){
 });
 
 gulp.task('js:init', function () {
-  return gulp.src(['./private/js/init/init.*.js'])
+    return gulp.src(['./private/js/init/init.*.js'])
     .pipe(concat('init.js'))
     .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('js:scripts', function () {
-  return gulp.src([
-      'vendor/jquery/dist/jquery.min.js',
-      'vendor/superfish/js/jquery.superfish-1.5.0.js',
-      'vendor/cycle/jquery.cycle.all.js',
-      'private/js/kontrast/kontrast.js'
+    return gulp.src([
+        'vendor/jquery/dist/jquery.min.js',
+        'vendor/superfish/js/jquery.superfish-1.5.0.js',
+        'vendor/cycle/jquery.cycle.all.js',
+        'private/js/kontrast/kontrast.js'
     ])
     .pipe(concat('scripts.js'))
     .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('sass:build', function () {
-  return gulp.src('./private/scss/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    return gulp.src('./private/scss/**/*.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions', 'ie >= 8', '> 1%'],
+        cascade: false
+    }))
     .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('sass:dev', function () {
-  return gulp.src('./private/scss/**/*.scss')
+    return gulp.src('./private/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions', 'ie >= 8', '> 1%'],
+        cascade: false
+    }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/css'))
+    .pipe(livereload());
 });
 
 gulp.task('watch', function() {
-  livereload.listen();
-  gulp.watch('./private/**/*.js', ['js:init', 'js:scripts']);
-  gulp.watch('./private/scss/**/*.scss', ['sass:dev']);
+    livereload.listen();
+    gulp.watch('./private/**/*.js', ['js']);
+    gulp.watch('./private/scss/**/*.scss', ['sass:dev']);
 });
 
-gulp.task('webserver', function() {
-  webserver.server({
-    root: 'public',
-    livereload: true
-  });
+gulp.task('webserver', ['watch'], function() {
+    webserver.server({
+        root: 'public'
+    });
 });

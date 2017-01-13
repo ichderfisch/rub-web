@@ -63,10 +63,10 @@
   /* (en) HTML 5 - adjusting visual formatting model to block level */
   /* (en) HTML 5 - Anpassung des visuellen Formatmodells auf Blockelemente */
   article,aside,canvas,details,figcaption,figure,
-  footer,header,hgroup,menu,nav,section,summary { 
+  footer,header,hgroup,menu,nav,section,summary {
   	display:block;
   }
-  
+
   /* (en) Clear borders for <fieldset> and <img> elements */
   /* (de) Rahmen für <fieldset> und <img> Elemente löschen */
   fieldset, img { border:0 solid; }

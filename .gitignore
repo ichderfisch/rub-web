@@ -3,7 +3,7 @@ node_modules
 vendor
 
 # Public Files
-public/*
+public
 
 # Windows stuff
 Thumbs.db

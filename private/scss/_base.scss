@@ -39,7 +39,7 @@ body {
 
   /* --- general text formatting | Allgemeine Textauszeichnung ------------------------------------------ */
 
-  p { 
+  p {
     line-height:1.5em;
     margin:0 0 1em 0;
   }
@@ -63,7 +63,7 @@ body {
     letter-spacing:.07em;
     cursor:help;
   }
-  
+
   sub { vertical-align: sub; font-size: smaller; }
   sup { vertical-align: super; font-size: smaller; }
 
@@ -110,10 +110,10 @@ body {
     background: $white;
   }
 
-  a:hover,	
-  a:active { 
-    color:#182E7A; 
-    text-decoration:underline; 
+  a:hover,
+  a:active {
+    color:#182E7A;
+    text-decoration:underline;
     outline: 0 none;
   }
 
