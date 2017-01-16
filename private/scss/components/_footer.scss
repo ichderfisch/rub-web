@@ -81,25 +81,27 @@
 	border-top: 1px solid #efefef;
 }
 
-#druckversion,
-#normalversion,
-#kontrastversion {
-	a {
-		background-position: left;
-		background-repeat: no-repeat;
-		padding-left: 1.5em;
-	}
+.footer__button {
+    background-color: transparent;
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 1.5em;
+    border: 0;
 }
 
-#druckversion a {
-  	background-image: url(../images/icons/drucken.gif);
+.footer__button:hover {
+    text-decoration: underline;
 }
 
-#normalversion a {
-	display: 				none;
-  	background-image: url(../images/icons/kontrast.gif);
+.footer__button--print {
+    background-image: url(../images/icons/drucken.gif);
 }
 
-#kontrastversion a {
-  	background-image: url(../images/icons/kontrast.gif);
+.footer__button--kontrast {
+    background-image: url(../images/icons/kontrast.gif);
+}
+
+.footer__button--normal {
+    background-image: url(../images/icons/kontrast.gif);
+    display: none;
 }

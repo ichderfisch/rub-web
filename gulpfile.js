@@ -44,7 +44,8 @@ gulp.task('copy:html', function() {
     return gulp.src([
         'private/*.html'
     ])
-    .pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./public/'))
+    .pipe(livereload());
 });
 
 gulp.task('copy:images', function() {
@@ -128,6 +129,7 @@ gulp.task('sass:dev', function () {
 
 gulp.task('watch', function() {
     livereload.listen();
+    gulp.watch('./private/*.html', ['copy:html']);
     gulp.watch('./private/**/*.js', ['js']);
     gulp.watch('./private/scss/**/*.scss', ['sass:dev']);
 });
