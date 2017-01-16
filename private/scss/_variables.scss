@@ -6,14 +6,12 @@ $page-bg: #f3f3f3;
 
 // Brand-Colors
 $rub-blue: #003560;
-$rub-green: #709708 /* #709108 */;
-$rub-green-alternative: #7c9c09;
+$rub-green: #709708;
 
 $light-green: #cdd9a2;
 $white-green:#e8efcf;
 
 $alert-red: #c30;
-
 
 // Typografie
 $font-family-base: Arial, Helvetica, sans-serif;
@@ -30,3 +28,20 @@ $font-size-2xl: 1.75em;
 $font-size-3xl: 2.5em;
 
 $font-color: $rub-blue;
+
+/**
+ * Resolutions max-width (Target: High Pixel Density):
+ Max -> 1040px (Desktop)
+ -> 640px  (Tablets)
+ -> 480px  (@2x 960px -> 736px iPhone6s)
+ -> 360px  (@2x 720px -> 667px iPhone5-6, 720px (div. Android)
+ -> 320px  (@2x 640px -> 480px iPhone2-4, 568px iPhone5)
+ * Media queries targeting INCREASINGLY SMALLER screens (Desktop First)
+ **/
+
+$screen-xl: 1040px;
+$screen-lg: 768px;
+$screen-md: 640px;
+$screen-sm: 480px;
+$screen-xs: 360px;
+$screen-xxs: 320px;

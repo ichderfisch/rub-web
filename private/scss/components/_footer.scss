@@ -85,21 +85,21 @@
 #normalversion,
 #kontrastversion {
 	a {
-		background-position:	left;
-		background-repeat:		no-repeat;
+		background-position: left;
+		background-repeat: no-repeat;
 		padding-left: 1.5em;
 	}
 }
 
 #druckversion a {
-  	background-image:		url(../images/icons/drucken.gif);
+  	background-image: url(../images/icons/drucken.gif);
 }
 
 #normalversion a {
 	display: 				none;
-  	background-image:		url(../images/icons/kontrast.gif);
+  	background-image: url(../images/icons/kontrast.gif);
 }
 
 #kontrastversion a {
-  	background-image:		url(../images/icons/kontrast.gif);
+  	background-image: url(../images/icons/kontrast.gif);
 }

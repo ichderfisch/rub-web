@@ -22,3 +22,9 @@
     }
   }
 }
+
+@media screen and (max-width: $screen-md) {
+    #breadcrumbs {
+        display: none;
+    }
+}

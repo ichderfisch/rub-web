@@ -1,8 +1,8 @@
 #seitennavigation {
 	background: $white;
-	
+
 	h3 {
-		border-top: 2px solid $rub-green-alternative;
+		border-top: 2px solid $rub-green;
 		color: $rub-blue;
 		padding: 0.3125em 0 0.625em;
 		font-weight:normal;
@@ -11,15 +11,15 @@
 	ul {
 		list-style: none;
 		margin: 0 0 1.5em 0;
-		border-top: 2px solid $rub-green-alternative;
+		border-top: 2px solid $rub-green;
 		border-bottom: 1px solid #ccc;
-		
+
 		li {
 			position: relative;
 			margin: 0 !important;
-		
-			a { 
-				display: block; 
+
+			a {
+				display: block;
 			}
 
 		}
@@ -36,7 +36,7 @@
 			}
 
 			ul li a {
-				margin-left: 1.5em; 
+				margin-left: 1.5em;
 			}
 		}
 	}
@@ -62,11 +62,17 @@
 }
 
 .aktiverlink {
-	background-color: $white-green;  
+	background-color: $white-green;
 	font-weight: bold !important;
 }
 
 a.aktivebox_ueberschrift {
 	font-weight: bold !important;
 	background-color: $white-green;
+}
+
+@media screen and (max-width: $screen-md) {
+    #seitennavigation {
+        display: none;
+    }
 }
