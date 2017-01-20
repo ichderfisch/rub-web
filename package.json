@@ -16,8 +16,15 @@
     "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^5.0.0",
+    "gulp-data": "^1.2.1",
     "gulp-livereload": "^3.8.1",
+    "gulp-markdown": "^1.2.0",
+    "gulp-pug": "^3.2.0",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "metalsmith": "^2.3.0"
+  },
+  "dependencies": {
+    "jstransformer-markdown-it": "^2.0.0"
   }
 }

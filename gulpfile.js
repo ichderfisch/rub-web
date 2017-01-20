@@ -1,12 +1,20 @@
 'use strict';
 
 var gulp = require('gulp');
+var data = require('gulp-data');
+
+var path = require('path');
+var fs   = require('fs');
 
 // CSS & JS
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+
+// Pug & Markdown
+var pug = require('gulp-pug');
+// var markdown = require('gulp-markdown');
 
 // Dev-Server
 var webserver = require('gulp-connect');
@@ -33,6 +41,13 @@ require('es6-promise').polyfill();
  * webserver
  *
  **/
+
+
+// gulp.task('markdown', function() {
+//     return gulp.src('./private/**/*.md')
+//     .pipe(markdown())
+//     .pipe(gulp.dest('./public/'));
+// });
 
 gulp.task('build', ['copy', 'js', 'sass:build'], function (){
 });
@@ -104,6 +119,23 @@ gulp.task('js:scripts', function () {
     .pipe(gulp.dest('./public/js'));
 });
 
+
+gulp.task('pug', function() {
+    return gulp.src([
+        'private/pages/**/*.pug',
+
+        // Do not render layout and include files
+        '!private/pages/**/_*.pug'
+    ])
+    .pipe(data(function(file) {
+      return require('./private/pages/_pages.json');
+    }))
+    .pipe(pug({
+        pretty: true,
+    }))
+    .pipe(gulp.dest('./public/'));
+});
+
 gulp.task('sass:build', function () {
     return gulp.src('./private/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -129,6 +161,7 @@ gulp.task('sass:dev', function () {
 
 gulp.task('watch', function() {
     livereload.listen();
+    gulp.watch('./private/**/*.pug', ['pug']);
     gulp.watch('./private/*.html', ['copy:html']);
     gulp.watch('./private/**/*.js', ['js']);
     gulp.watch('./private/scss/**/*.scss', ['sass:dev']);
