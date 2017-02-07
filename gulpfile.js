@@ -12,142 +12,130 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
-// Pug & Markdown
+// Pug
 var pug = require('gulp-pug');
-// var markdown = require('gulp-markdown');
 
 // Dev-Server
 var webserver = require('gulp-connect');
 var livereload = require('gulp-livereload');
+
+// var pages = JSON.parse(fs.readFileSync('./dev/pages/_pages.json'));
+
+var paths = {
+    source: './dev/',
+    private: './private/',
+    build: './public/'
+}
+
+var buildFiles = {
+    root: paths.source + '*.*',
+    css: paths.source + 'css/*.css',
+    js: paths.source + 'js/*.js',
+    img: paths.source + 'images/**/*',
+    example: {
+        root: paths.build + 'example/',
+        css: paths.build + 'example/css/',
+        js: paths.build + 'example/js/',
+        img: paths.build + 'example/images/',
+        pug: paths.source + 'pages/example/*.pug',
+        meta: paths.source + 'pages/example/_metadata.json',
+        html: paths.build + 'example/'
+    }
+}
 
 // For autoprefixer due to old version of Node and npm
 require('es6-promise').polyfill();
 
 /**
  *
+ * Projects
+ * 1. Example
+ *
+ **/
+
+gulp.task('build:example:css', ['scss:build'], function() {
+    return gulp.src(buildFiles.css)
+    .pipe(gulp.dest(buildFiles.example.css))
+});
+
+gulp.task('build:example:js', ['js:build'], function() {
+    return gulp.src(buildFiles.js)
+    .pipe(gulp.dest(buildFiles.example.js))
+});
+
+gulp.task('build:example:img', function() {
+    return gulp.src(buildFiles.img)
+    .pipe(gulp.dest(buildFiles.example.img))
+});
+
+gulp.task('build:example:misc', function() {
+    return gulp.src(buildFiles.root)
+    .pipe(gulp.dest(buildFiles.example.root))
+});
+
+gulp.task('build:example:html', function() {
+    return gulp.src(buildFiles.example.pug)
+    .pipe(data( function(file) {
+        return JSON.parse(
+            fs.readFileSync(buildFiles.example.meta)
+        )
+    }))
+    .pipe(pug({
+        pretty: true,
+    }))
+    .pipe(gulp.dest(buildFiles.example.html))
+    .pipe(livereload());
+});
+
+gulp.task('build:example', [
+    'build:example:css',
+    'build:example:js',
+    'build:example:img',
+    'build:example:misc',
+    'build:example:html'
+], function() {
+});
+
+gulp.task('build', ['build:example'], function (){
+});
+
+/**
+ * Helper
  * Table of Content
  * ----------------
- * build
- * copy
- * copy:html
- * copy:misc
- * copy:license
- * js
- * js:init
- * js:scripts
- * sass:build
- * sass:dev
+ * js:build
+ * scss:build
+ * scss:dev
  * watch
  * webserver
  *
  **/
 
-
-// gulp.task('markdown', function() {
-//     return gulp.src('./private/**/*.md')
-//     .pipe(markdown())
-//     .pipe(gulp.dest('./public/'));
-// });
-
-gulp.task('build', ['copy', 'js', 'sass:build'], function (){
-});
-
-gulp.task('copy', ['copy:html', 'copy:images', 'copy:misc', 'copy:license'], function(){
-});
-
-gulp.task('copy:html', function() {
+gulp.task('js:build', function () {
     return gulp.src([
-        'private/*.html'
-    ])
-    .pipe(gulp.dest('./public/'))
-    .pipe(livereload());
-});
-
-gulp.task('copy:images', function() {
-    return gulp.src([
-        'private/images/**/*'
-    ])
-    .pipe(gulp.dest('./public/images/'));
-});
-
-gulp.task('copy:misc', function(){
-    return gulp.src([
-        // Copy all files
-        'private/**/*',
-
-        // Exclude the following files
-        // (other tasks will handle the copying of these files)
-        '!private/images/',
-        '!private/images/**/*',
-        '!private/scss',
-        '!private/scss/**/*',
-        '!private/js',
-        '!private/js/**/*',
-        '!private/**/*.html',
-
-        // Not needed in build
-        '!private/vendor/',
-        '!private/vendor/**/*',
-        '!private/doc/',
-        '!private/doc/**/*'
-    ])
-    .pipe(gulp.dest('./public/'));
-});
-
-gulp.task('copy:license', function() {
-    return gulp.src('LICENSE.txt')
-    .pipe(gulp.dest('./public/'));
-});
-
-gulp.task('js', ['js:init', 'js:scripts'], function(){
-});
-
-gulp.task('js:init', function () {
-    return gulp.src(['./private/js/init/init.*.js'])
-    .pipe(concat('init.js'))
-    .pipe(gulp.dest('./public/js'));
-});
-
-gulp.task('js:scripts', function () {
-    return gulp.src([
-        'private/vendor/jquery/dist/jquery.min.js',
-        'private/vendor/superfish/js/jquery.superfish-1.5.0.js',
-        'private/vendor/cycle/jquery.cycle.all.js',
-        'private/js/kontrast/kontrast.js'
+        'dev/vendor/jquery/dist/jquery.min.js',
+        'dev/vendor/superfish/js/jquery.superfish-1.5.0.js',
+        'dev/vendor/cycle/jquery.cycle.all.js',
+        'dev/js/kontrast/kontrast.js',
+        'dev/js/init/init.*.js'
     ])
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('./public/js'));
+    .pipe(gulp.dest('./dev/js'));
 });
 
-
-gulp.task('pug', function() {
-    return gulp.src([
-        'private/pages/**/*.pug',
-
-        // Do not render layout and include files
-        '!private/pages/**/_*.pug'
-    ])
-    .pipe(data(function(file) {
-      return require('./private/pages/_pages.json');
-    }))
-    .pipe(pug({
-        pretty: true,
-    }))
-    .pipe(gulp.dest('./public/'));
-});
-
-gulp.task('sass:build', function () {
-    return gulp.src('./private/scss/**/*.scss')
+gulp.task('scss:build', function () {
+    return gulp.src('./dev/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: ['last 2 versions', 'ie >= 8', '> 1%'],
         cascade: false
     }))
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./dev/css'))
+    .pipe(livereload());
 });
 
-gulp.task('sass:dev', function () {
-    return gulp.src('./private/scss/**/*.scss')
+gulp.task('scss:dev', function () {
+    return gulp.src('./dev/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -155,16 +143,16 @@ gulp.task('sass:dev', function () {
         cascade: false
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/css'))
+    .pipe(gulp.dest('./dev/css'))
     .pipe(livereload());
 });
 
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('./private/**/*.pug', ['pug']);
-    gulp.watch('./private/*.html', ['copy:html']);
-    gulp.watch('./private/**/*.js', ['js']);
-    gulp.watch('./private/scss/**/*.scss', ['sass:dev']);
+    gulp.watch('./dev/**/*.pug', ['build']);
+    gulp.watch('./dev/**/*.json', ['build']);
+    gulp.watch('./dev/**/*.js', ['build']);
+    gulp.watch('./dev/scss/**/*.scss', ['build']);
 });
 
 gulp.task('webserver', ['watch'], function() {

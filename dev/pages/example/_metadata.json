@@ -1,0 +1,8 @@
+{
+    "id": "0",
+    "title": "Example Page",
+    "url": "http://ruhr-uni-bochum/example",
+    "folder": "./example/",
+    "description": "This is an example page!",
+    "image": "../images/hp/bild007.jpg"
+}

@@ -14,21 +14,8 @@ Feel free to improve. Don't use on productive sites, unless you know what you ar
 git clone https://github.com/ichderfisch/rub-web-layout.git
 npm install
 bower install
-gulp build
+gulp webserver
 ```
-
-## How to use
-
-This repository does not have any dreamweaver or other template files, as the original repository. Just look at these files or  ``public/index.html`` for living html-examples. I probably add some templates later.
-
-After building simply add the ``main.css`` or ``main.min.css`` to your html-templates. No more need for handling several different CSS-files.
-
-A major difference with the original templates is the usage of new classes on ``<body>``.
-
-- ``<body class="one-col">`` for a single column layout
-- ``<body class="two-col-nav-aside">`` for a two column layout with the left navigation bar
-- ``<body class="two-col-margial">`` for a two column layout with a sidebar on the right
-- ``<body class="three-col">`` for a three column layout with the navigation bar left an a sidebar on the right
 
 ## Note
 

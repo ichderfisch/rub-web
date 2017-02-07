@@ -1,0 +1,42 @@
+//- --------------------------------
+//- MIXINS
+//- --------------------------------
+
+//- Lists
+mixin list(style)
+    if style
+        ol.list.list--numbered&attributes(attributes)
+            block
+    else
+        ul.list.list--unnumbered&attributes(attributes)
+            block
+
+mixin item()
+    li.list__item&attributes(attributes)
+        block
+
+//- Image
+mixin image(filename, addClass, alt, width, height)
+    img(src=(filename) class=(addClass) alt=(alt) width=(width) height=(height))
+
+
+//- --------------------------------
+//- CARDS
+//- --------------------------------
+
+//- People Card
+mixin people-card(people)
+    .card
+        .card__field.card__field--name
+            +image("http://placehold.it/150x180", "card__image", people.name)
+        .card__field.card__field--name= people.name
+        .card__field.card__field--room= people.room
+        .card__field.card__field--phone= people.phone
+        .card__field.card__field--mail= people.mail
+
+//- News
+mixin news-card(newsItem)
+    .card
+        .card__field.card__field--title= newsItem.title
+        .card__field.card__field--date= newsItem.date
+        .card__field.card__field--room= newsItem.teaser

@@ -1,0 +1,63 @@
+footer#footer
+    .subcloumns#linkleiste
+        .c25l
+            .subcl
+                a(href="href=http://www.ruhr-uni-bochum.de")
+                    img(src="https://www.ruhr-uni-bochum.de/images/logos/Logo_RUB_SCHWARZ-2.gif" width="129" height="34" alt="Logo Ruhr-Universität" style="margin-bottom:10px")
+                br
+                span Universitätsstraße 150 | 44801 Bochum
+                br
+                span Tel.: +49 234 32201
+                br
+                a(href="http://www.ruhr-uni-bochum.de/impressum.htm" title="Impressum Ruhr-Universitat Bochum") Impressum
+                span  |&nbsp;
+                a(href="http://www.ruhr-uni-bochum.de/kontakt") Kontakt RUB
+        .c25l
+            .subc
+                h6 Forung und Lehre
+                ul
+                  li
+                    a(href="http://www.ruhr-uni-bochum.de/universitaet/fakultaeten/index.html") Fakultäten
+                  li
+                    a(href="http://studienangebot.rub.de/") Studienangebot der RUB
+                  li
+                    a(href="http://www.rd.ruhr-uni-bochum.de/") Research Departments
+                  li
+                    a(href="http://www.research-school.ruhr-uni-bochum.de/") Research School
+                  li
+                    a(href="http://www.ruhr-uni-bochum.de/solvation/") Exzellenzcluster RESOLV
+        .c25l
+            .subc
+                h6 Portale
+                ul
+                    li
+                        a(href="http://aktuell.ruhr-uni-bochum.de/") Aktuell
+                    li
+                        a(href="http://www.ruhr-uni-bochum.de/berufungsportal") Berufung
+                    li
+                        a(href="http://www.ub.ruhr-uni-bochum.de/") Bibliothek
+                    li
+                        a(href="http://www.ruhr-uni-bochum.de/chancengleich/") Chancengleich
+                    li
+                        a(href="http://international.ruhr-uni-bochum.de/") International
+        .c25r
+            .subcr
+                h6 Soziale Netzwerke
+                include _social
+
+    .subcolumns
+        .c50l
+            .subcl
+                #ansprechpartner
+                    span Letzte Änderung: 01.01.1970 |
+                    a(href="http://www.ruhr-uni-bochum.de/impressum.htm" title="Impressum Ruhr-Universität Bochum") Impressum
+                    span |
+                    a(href="mailto:webteam@presse.ruhr-uni-bochum.de" title="Email Inhalt") Inhalt
+                    span |
+                    a(href="mailto:webmaster@ruhr-uni-bochum.de" title="Email Webmaster") Technik
+        .c50r
+            .subcr
+                #umschaltung
+                    button.footer__button.footer__button--normal(onclick="activeCSS('RUB-Normal'); Logowechsel(); return false;" title="Umschaltung Kontrast-Normalansicht") Normal
+                    button.footer__button.footer__button--kontrast(onclick="activeCSS('Kontrast'); Logowechselinvers(); return false;" title="Umschaltung Normal-Kontrastansicht") Kontrast
+                    button.footer__button.footer__button--print(onclick="javascript:self.print(); return false;" title="Diese Seite drucken") Drucken

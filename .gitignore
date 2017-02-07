@@ -2,6 +2,10 @@
 node_modules
 vendor
 
+dev/pages/*
+!dev/pages/_includes
+!dev/pages/example
+
 # Public Files
 public
 

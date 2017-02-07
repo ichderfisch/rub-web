@@ -16,6 +16,21 @@
 
 #uninavi {
     line-height: 4em;
+    display: inline;
+    list-style-type: none;
+
+    > li {
+        display: inline-block;
+        border-right: 1px solid #aaa;
+        padding-right: 0.3em;
+        padding-left: 0.3em;
+        margin-left: 0;
+        line-height: 1em;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
 
     a:link,
     a:visited {

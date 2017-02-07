@@ -1,0 +1,50 @@
+include _mixins
+
+//- --------------------------------
+//- LAYOUT
+//- --------------------------------
+
+doctype
+html.no-js(lang="de")
+
+    include _head
+
+    body.two-col-nav-aside
+        .page_margins
+            .page
+
+                include _header
+
+                //-#nav
+                    // TODO
+
+                #teaser
+                    .subcolumns
+                        .c75l
+                            .subcl
+                                ol#breadcrumbs
+                                    li
+                                        a(href="http://www.ruhr-uni-bochum.de/" title="Startseite der Ruhr-Universität Bochum") RUB
+                                        |  &raquo;
+                                    li
+                                        a.current Ihre Startseite
+                        .c25r
+                            .subcr
+                                #sprache
+                                    a.flagge-englisch-vor(href="#") Englisch
+
+                main#main
+                    #inhalt
+                        #col1
+                            #con1_content.clearfix
+                                #seitennavigation
+                                    block nav
+
+                        #col3
+                            #con3_content.clearfix
+                                #inhalt
+                                    block main
+
+                include _footer
+
+        script(type="text/javascript" src="./js/scripts.js")
