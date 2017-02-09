@@ -1,30 +1,29 @@
 // Global
-@import "_reset";
-@import "_variables";
-@import "_base";
-@import "_globals";
-
+@import 'reset';
+@import 'variables';
+@import 'base';
+@import 'globals';
 // Components
-@import "components/_alerts";
-@import "components/_angebote";
-@import "components/_boxes";
-@import "components/_breadcrumbs";
-@import "components/_buttons";
-@import "components/_clear";
-@import "components/_footer";
-@import "components/_grid";
-@import "components/_header";
-@import "components/_icons";
-@import "components/_nav";
-@import "components/_nav-aside";
-@import "components/_nav-top";
-@import "components/_skip";
-@import "components/_slide";
-@import "components/_teaser";
-@import "components/_topnav";
+@import 'components/alerts';
+@import 'components/angebote';
+@import 'components/boxes';
+@import 'components/breadcrumbs';
+@import 'components/buttons';
+@import 'components/clear';
+@import 'components/footer';
+@import 'components/grid';
+@import 'components/header';
+@import 'components/icons';
+@import 'components/nav';
+@import 'components/nav-aside';
+@import 'components/nav-top';
+@import 'components/skip';
+@import 'components/slide';
+@import 'components/teaser';
+@import 'components/topnav';
 
 // Addons
-// @import "addons/_my-addon";
+// @import 'addons/my-addon';
 
 // Print
-@import "_print";
+@import 'print';

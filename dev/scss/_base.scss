@@ -1,183 +1,320 @@
-html * { font-size:100.01%; }
+html {
+    * {
+        font-size: 100.01%;
+    }
+}
 
-/* (en) base layout gets standard font size 12px */
-/* (de) Basis-Layout erhält Standardschriftgröße von 12 Pixeln */
 body {
+    color: $font-color;
     font-family: $font-family-base;
     font-size: $font-size-base;
-    color: $font-color;
 }
 
-  /*--- Headings | Überschriften ------------------------------------------------------------------------*/
-
-  h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $font-color;
     font-family: $font-family-base;
     font-weight: bold;
-    color: $font-color;
-    margin: 0 0 0.25em 0;
-  }
+    margin: 0 0 .25em;
+}
 
-  h1 { font-size: $font-size-3xl; }                       /* 30px */
-  h2 { font-size: $font-size-2xl; }                      /* 22px */
-  h3 { font-size: $font-size-xl }                       /* 18px */
-  h4 { font-size: $font-size-la }                 /* 16px */
-  h5 { font-size: $font-size-md }                 /* 14px */
-  h6 { font-size: $font-size-md  }                 /* 14px */
+h1 {
+    font-size: $font-size-3xl;
+}
 
-  /* --- Lists | Listen  -------------------------------------------------------------------------------- */
-  ul, ol, dl { line-height:1.5em; margin:0 0 1em 1em; }
-  ul { list-style-type:none; list-style-image:url(../images/navigation/pfeil-rechts2.gif); }
-  ul ul { list-style-type:circle; margin-bottom:0; }
+h2 {
+    font-size: $font-size-2xl;
+}
 
-  ol { list-style-type:decimal; }
-  ol ol { list-style-type:lower-latin; margin-bottom:0; }
+h3 {
+    font-size: $font-size-xl;
+}
 
-  li { margin-left:0.8em; line-height:1.5em; }
+h4 {
+    font-size: $font-size-la;
+}
 
-  dt { font-weight:bold; }
-  dd { margin:0 0 1em 0.8em; }
+h5 {
+    font-size: $font-size-md;
+}
 
-  /* --- general text formatting | Allgemeine Textauszeichnung ------------------------------------------ */
+h6 {
+    font-size: $font-size-md;
+}
 
-  p {
-    line-height:1.5em;
-    margin:0 0 1em 0;
-  }
+dl,
+ol,
+ul {
+    line-height: 1.5em;
+    margin: 0 0 1em 1em;
+}
 
-  blockquote, cite, q {
+ul {
+    list-style-image: url('../images/navigation/pfeil-rechts2.gif');
+    list-style-type: none;
+
+    ul {
+        list-style-type: circle;
+        margin-bottom: 0;
+    }
+}
+
+ol {
+    list-style-type: decimal;
+
+    ol {
+        list-style-type: lower-latin;
+        margin-bottom: 0;
+    }
+}
+
+li {
+    line-height: 1.5em;
+    margin-left: .8em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0 0 1em .8em;
+}
+
+p {
+    line-height: 1.5em;
+    margin: 0 0 1em;
+}
+
+blockquote,
+cite,
+q {
     font-family: $font-family-serif;
     font-style: italic;
-  }
-
-  blockquote { margin:0 0 1em 1.6em; color:#666; }
-
-  strong,b { font-weight:bold; }
-  em,i { font-style:italic; }
-
-  big { font-size:116.667%; }
-  small { font-size:91.667%; }
-
-  acronym, abbr {
-    border-bottom:1px #aaa dotted;
-    font-variant:small-caps;
-    letter-spacing:.07em;
-    cursor:help;
-  }
-
-  sub { vertical-align: sub; font-size: smaller; }
-  sup { vertical-align: super; font-size: smaller; }
-
-  hr {
-    color: $white;
-    background:transparent;
-    margin:0 0 0.5em 0;
-    padding:0 0 0.5em 0;
-    border:0;
-    border-bottom:1px #eee solid;
-  }
-
- /**
-  * (en) reset monospaced elements to font size 16px in all browsers
-  * (de) Schriftgröße von monospaced Elemente in allen Browsern auf 16 Pixel setzen
-  *
-  * @see: http://webkit.org/blog/67/strange-medium/
-  */
-
-  textarea, pre, code, kbd, samp, var, tt {
-    font-family: $font-family-mono;
-  }
-
-  pre { line-height:1.5em; margin:0 0 1em 0; }
-  pre, code, kbd, tt, samp, var { font-size:100%; }
-  pre, code { color:#800; }
-  kbd, samp, var, tt { color:#666; font-weight:bold; }
-  var, dfn { font-style:italic; }
-
-  /*--- Links ----------------------------------------------------------------------------------------- */
-
-  a {
-    color:#0058AD;
-    text-decoration:none;
-  }
-
-  a:visited  { color:#3C73A4; }
-
-  /* (en) maximum constrast for tab focus - change with great care */
-  /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
-  a:focus {
-    text-decoration:underline;
-    color: $black;
-    background: $white;
-  }
-
-  a:hover,
-  a:active {
-    color:#182E7A;
-    text-decoration:underline;
-    outline: 0 none;
-  }
-
-  /* --- images (with optional captions) | Bilder (mit optionaler Bildunterschrift) ------------------ */
-
-  p.icaption_left { float:left; display:inline; margin:0 1em 0.15em 0; }
-  p.icaption_right { float:right; display:inline; margin:0 0 0.15em 1em; }
-
-  p.icaption_left img,
-  p.icaption_right img { padding:0; border:1px #888 solid; }
-
-  p.icaption_left strong,
-  p.icaption_right strong { display:block; overflow:hidden; margin-top:2px; padding:0.3em 0.5em; background:#eee; font-weight:normal; font-size:91.667%; }
-
- /**
-  * ------------------------------------------------------------------------------------------------- #
-  *
-  * Generic Content Classes
-  *
-  * (en) standard classes for positioning and highlighting
-  * (de) Standardklassen zur Positionierung und Hervorhebung
-  *
-  * @section content-generic-classes
-  */
-
-  .float_left { float:left; display:inline; margin-right:1em; margin-bottom:0.15em; }
-  .float_right { float:right; display:inline; margin-left:1em; margin-bottom:0.15em; }
-  .center { display:block; text-align:center; margin:0.5em auto; }
-
- /**
-  * ------------------------------------------------------------------------------------------------- #
-  *
-  * Tables | Tabellen
-  *
-  * (en) Generic classes for table-width and design definition
-  * (de) Generische Klassen für die Tabellenbreite und Gestaltungsvorschriften für Tabellen
-  *
-  * @section content-tables
-  */
-
-  table {
-    width:auto;
-    border-collapse:collapse;
-    margin-bottom:1em;
-    border-top:1px #888 solid;
-    border-bottom:1px #888 solid;
-  }
-
-  table caption { font-variant:small-caps; }
-  table.full { width:100%; }
-  table.fixed { table-layout:fixed; }
-
-  th,td { padding:0.5em; vertical-align: top; }
-  thead th { color:#000; border-bottom:2px #800 solid; }
-  tbody th { background:#f2f2f2; color:#333; }
-  tbody th[scope="row"], tbody th.sub { background:#f0f0f0; }
-
-  tbody th { border-bottom:1px solid #fff; text-align:left; }
-  tbody td { border-bottom:1px solid #eee; }
-
-  tbody tr:hover th[scope="row"],
-  tbody tr:hover tbody th.sub {
-	background-color:#EDF0E8;
 }
-  tbody tr:hover td {
-	background-color:#FAFFF9;
+
+blockquote {
+    color: #666;
+    margin: 0 0 1em 1.6em;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+big {
+    font-size: 116.667%;
+}
+
+small {
+    font-size: 91.667%;
+}
+
+abbr,
+acronym {
+    border-bottom: 1px #aaa dotted;
+    cursor: help;
+    font-variant: small-caps;
+    letter-spacing: .07em;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+hr {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px #eee solid;
+    color: $white;
+    margin: 0 0 .5em;
+    padding: 0 0 .5em;
+}
+
+code,
+kbd,
+pre,
+samp,
+textarea,
+tt,
+var {
+    font-family: $font-family-mono;
+}
+
+pre {
+    line-height: 1.5em;
+    margin: 0 0 1em;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+    font-size: 100%;
+}
+
+code,
+pre {
+    color: #800;
+}
+
+kbd,
+samp,
+tt,
+var {
+    color: #666;
+    font-weight: bold;
+}
+
+dfn,
+var {
+    font-style: italic;
+}
+
+a {
+    color: #0058ad;
+    text-decoration: none;
+
+    &:focus {
+        background: $white;
+        color: $black;
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: #3c73a4;
+    }
+
+    &:active,
+    &:hover {
+        color: #182a7a;
+        outline: 0 none;
+        text-decoration: underline;
+    }
+}
+
+p.icaption_left {
+    display: inline;
+    float: left;
+    margin: 0 1em .15em 0;
+}
+
+p.icaption_right {
+    display: inline;
+    float: right;
+    margin: 0 0 .15em 1em;
+}
+
+p.icaption_left img,
+p.icaption_right img {
+    border: 1px #888 solid;
+    padding: 0;
+}
+
+p.icaption_left strong,
+p.icaption_right strong {
+    background: #eee;
+    display: block;
+    font-size: 91.667%;
+    font-weight: normal;
+    margin-top: 2px;
+    overflow: hidden;
+    padding: .3em .5em;
+}
+
+.float_left {
+    display: inline;
+    float: left;
+    margin-bottom: .15em;
+    margin-right: 1em;
+}
+
+.float_right {
+    display: inline;
+    float: right;
+    margin-bottom: .15em;
+    margin-left: 1em;
+}
+
+.center {
+    display: block;
+    margin: .5em auto;
+    text-align: center;
+}
+
+table {
+    border-bottom: 1px #888 solid;
+    border-collapse: collapse;
+    border-top: 1px #888 solid;
+    margin-bottom: 1em;
+    width: auto;
+
+    caption {
+        font-variant: small-caps;
+    }
+
+    &.full {
+        width: 100%;
+    }
+
+    &.fixed {
+        table-layout: fixed;
+    }
+}
+
+td,
+th {
+    padding: .5em;
+    vertical-align: top;
+}
+
+thead th {
+    border-bottom: 2px #800 solid;
+    color: #000;
+}
+
+tbody {
+    th {
+        background: #f2f2f2;
+        border-bottom: 1px solid #fff;
+        color: #333;
+        text-align: left;
+
+        &.sub,
+        &[scope='row'] {
+            background: #f0f0f0;
+        }
+    }
+
+    td {
+        border-bottom: 1px solid #eee;
+    }
+
+    tr {
+        &:hover {
+            background-color: #edf0e8;
+
+            td {
+                background-color: #fafff9;
+            }
+        }
+    }
 }

@@ -1,35 +1,40 @@
-.highlight { color: $alert-red; }
-.dimmed { color:#888; }
+.highlight {
+    color: $alert-red;
+}
+
+.dimmed {
+    color: #888;
+}
 
 %alert-layout {
-  padding:10px;
-  margin-bottom:1em;
+    margin-bottom: 1em;
+    padding: 10px;
 }
 
 .note {
-  background:#efe;
-  color:#040;
-  border:2px #484 solid;
-  @extend %alert-layout ;
+    @extend %alert-layout;
+    background-color: #efe;
+    border: 2px #484 solid;
+    color: #040;
 }
 
 .important {
-  background:#ffe;
-  color:#440;
-  border:2px #884 solid;
-  @extend %alert-layout
+    @extend %alert-layout;
+    background-color: #ffe;
+    border: 2px #884 solid;
+    color: #440;
 }
 
 .warning {
-  background:#fee;
-  color:#400;
-  border:2px #844 solid;
-  @extend %alert-layout
+    @extend %alert-layout;
+    background-color: #fee;
+    border: 2px #844 solid;
+    color: #400;
 }
 
 .info {
-  background:#f8f8f8;
-  color:#666;
-  font-size:91.7%;
-  @extend %alert-layout
+    @extend %alert-layout;
+    background-color: #f8f8f8;
+    color: #666;
+    font-size: 91.7%;
 }

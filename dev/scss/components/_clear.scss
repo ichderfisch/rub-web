@@ -1,31 +1,30 @@
- /*------------------------------------------------------------------------------------------------------*/
-
- /**
+/**
   * @section clearing methods
   * @see     http://yaml.de/en/documentation/basics/general.html
   */
+.clearfix {
+    display: block;
 
-  /* (en) clearfix method for clearing floats */
-  /* (de) Clearfix-Methode zum Clearen der Float-Umgebungen */
-  .clearfix:after {
-    clear:both;
-    content:".";
-    display:block;
-    font-size:0;
-    height:0;
-    visibility:hidden;
-  }
+    &::after {
+        clear: both;
+        content: '.';
+        display: block;
+        font-size: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
 
-  /* (en) essential for Safari browser !! */
-  /* (de) Diese Angabe benötigt der Safari-Browser zwingend !! */
-  .clearfix { display:block; }
+/* (en) alternative solution to contain floats */
+/* (de) Alternative Methode zum Einschließen von Float-Umgebungen */
+.floatbox {
+    display: table;
+    width: 100%;
+}
 
-  /* (en) alternative solution to contain floats */
-  /* (de) Alternative Methode zum Einschließen von Float-Umgebungen */
-  .floatbox { display:table; width:100%; }
-
-  /* (en) IE-Clearing:Only used in Internet Explorer, switched on in iehacks.css */
-  /* (de) IE-Clearing:Benötigt nur der Internet Explorer und über iehacks.css zugeschaltet */
-  #ie_clearing { display:none; }
-
- /*------------------------------------------------------------------------------------------------------*/
+/* (en) IE-Clearing:Only used in Internet Explorer, switched on in iehacks.css */
+/* (de) IE-Clearing:Benötigt nur der Internet Explorer und über iehacks.css zugeschaltet */
+#ie_clearing {
+    display: none;
+}
+/*------------------------------------------------------------------------------------------------------*/

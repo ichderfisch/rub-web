@@ -1,43 +1,46 @@
- /**
+/**
   * @section hidden elements | Versteckte Elemente
   * @see     http://www.yaml.de/en/documentation/basics/skip-links.html
   *
   * (en) skip links and hidden content
   * (de) Skip-Links und versteckte Inhalte
   */
+/* (en) classes for invisible elements in the base layout */
+/* (de) Klassen für unsichtbare Elemente im Basislayout */
+.hideme,
+.print,
+.skip {
+    left: -32768px;
+    position: absolute;
+    top: -32768px;
+    /* LTR */
+}
 
-  /* (en) classes for invisible elements in the base layout */
-  /* (de) Klassen für unsichtbare Elemente im Basislayout */
-  .skip, .hideme, .print {
-    position:absolute;
-    top:-32768px;
-    left:-32768px; /* LTR */
-  }
+/* (en) make skip links visible when using tab navigation */
+/* (de) Skip-Links für Tab-Navigation sichtbar schalten */
+.skip:active,
+.skip:focus {
+    left: 0;
+    position: static;
+    top: 0;
+}
 
-  /* (en) make skip links visible when using tab navigation */
-  /* (de) Skip-Links für Tab-Navigation sichtbar schalten */
-  .skip:focus, .skip:active {
-    position:static;
-    top:0;
-    left:0;
-  }
+/* skiplinks:technical setup */
+#skiplinks {
+    left: -32768px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
-  /* skiplinks:technical setup */
-  #skiplinks { 
-    position:absolute;
-    top:0px; 
-    left:-32768px; 
-    z-index:1000; 
-    width:100%;
-    margin:0; 
-    padding:0; 
-    list-style-type:none;   
-  }
-  
-  #skiplinks .skip:focus,
-  #skiplinks .skip:active {
-    left:32768px; 
-    outline:0 none;
-    position:absolute; 
-    width:100%;
-  }
+#skiplinks .skip:active,
+#skiplinks .skip:focus {
+    left: 32768px;
+    outline: 0 none;
+    position: absolute;
+    width: 100%;
+}

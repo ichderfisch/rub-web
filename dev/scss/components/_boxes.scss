@@ -1,19 +1,19 @@
 
 .boxgrau,
 .boxgruen {
-	margin: 0 0 1.5em 0;
-	padding:0px;
+    margin: 0 0 1.5em 0;
+    padding: 0;
 
     h3 {
-        padding: 5px;
-        font-size: 1em;
         color: $rub-blue;
+        font-size: 1em;
         font-weight: bold;
-        letter-spacing:1px;
+        letter-spacing: 1px;
+        padding: 5px;
     }
 
-    h4, 
-    h5, 
+    h4,
+    h5,
     p {
         padding: 5px;
     }
@@ -21,19 +21,19 @@
 }
 
 .boxgrau {
-	border: 1px solid #ececec;
-	border-top: 2px solid #ccc;
-	background-color: #F9F9F9;
-    
+    background-color: #f9f9f9;
+    border: 1px solid #ececec;
+    border-top: 2px solid #ccc;
+
     h3 {
-        background-color: #F0F0F0;
+        background-color: #f0f0f0;
     }
 }
 
 .boxgruen {
-	border: 1px solid $light-green;
-	border-top: 2px solid $rub-green;
-	background-color: #F3F7EE;
+    background-color: #f3f7ee;
+    border: 1px solid $light-green;
+    border-top: 2px solid $rub-green;
 
     h3 {
         background-color: $white-green;
@@ -42,7 +42,7 @@
 }
 
 #inhalt .boxgrau,
-#inhalt .boxgruen { 
+#inhalt .boxgruen {
     h3 {
         font-weight: bold;
     }

@@ -4,7 +4,7 @@
     #footer,
     #col1,
     #col2 {
-        display: none
+        display: none;
     }
 
     /* HTML 5 Boilerplate */
@@ -27,11 +27,11 @@
 
     /*
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: ' (' attr(href) ')';
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: ' (' attr(title) ')';
     }
     */
 
@@ -40,9 +40,9 @@
      * or use the `javascript:` pseudo protocol
      */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
+    a[href^='#']:after,
+    a[href^='javascript:']:after {
+        content: '';
     }
 
     pre,

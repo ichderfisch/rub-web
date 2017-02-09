@@ -5,20 +5,20 @@
 */
 
 .button {
-    display: inline-block;
     background-color: #ccc;
     background-image: linear-gradient(to bottom, #eee, #ccc);
     border: 1px solid #777;
-    border-radius: 0.2em;
-    box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.15);
+    border-radius: .2em;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, .8) inset, 0 1px 0 rgba(0, 0, 0, .15);
     color: #003560 !important;
     cursor: pointer;
+    display: inline-block;
     font: normal 1em/2em Arial, sans-serif;
-    margin: 0.5em 0.25em 0 0;
-    padding: 0 0.5em;
+    margin: .5em .25em 0 0;
     overflow: visible; /* removes extra side spacing in IE */
+    padding: 0 .5em;
     text-decoration: none !important;
-    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
     white-space: nowrap;
 
 
@@ -30,59 +30,58 @@
     &:active {
         background-color: #bbb;
         background-image: linear-gradient(to bottom, #ccc, #bbb);
-        box-shadow: 2px 2px 3px rgba(0,0,0,.2) inset;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, .2) inset;
         position: relative;
         top: 1px;
     }
 
     &:focus {
+        background-color: #fafafa;
         outline: 0;
-        background: #fafafa;
     }
 
     /* pseudo elements don't work on input */
     &::before {
-        background: #ccc;
-        background: $rub-green;
-        float: left;
-        width: 1em;
-        text-align: center;
-        font-size: 1.1em;
-        margin: 0 0.5em 0 -0.6em;
-        padding: 0 .2em;
-        color: #fff;
-        box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+        background-color: $rub-green;
         border-radius: .15em 0 0 .15em;
+        box-shadow: 1px 0 0 rgba(0, 0, 0, .5), 2px 0 0 rgba(255, 255, 255, .5);
+        color: #fff;
+        float: left;
+        font-size: 1.1em;
+        margin: 0 .5em 0 -.6em;
+        padding: 0 .2em;
         pointer-events: none;
+        text-align: center;
+        width: 1em;
     }
 }
 
-.button-add::before { content: "\271A"; }
-.button-delete::before { content: "\2718"; }
-.button-edit::before { content: "\270E"; }
-.button-email::before { content: "\2709"; }
-.button-like::before { content: "\2764"; }
-.button-next::before { content: "\279C"; }
-.button-previous::before { content: "\2190"; }
-.button-play::before { content: "\25B6"; }
-.button-save::before { content: "\2714"; }
-.button-spark::before { content: "\2737"; }
-.button-star::before { content: "\2605"; }
+.button-add::before { content: '\271A'; }
+.button-delete::before { content: '\2718'; }
+.button-edit::before { content: '\270E'; }
+.button-email::before { content: '\2709'; }
+.button-like::before { content: '\2764'; }
+.button-next::before { content: '\279C'; }
+.button-previous::before { content: '\2190'; }
+.button-play::before { content: '\25B6'; }
+.button-save::before { content: '\2714'; }
+.button-spark::before { content: '\2737'; }
+.button-star::before { content: '\2605'; }
 
 // Button Disabled
 .button[disabled],
 .button[disabled]:hover {
     background: #eee;
-    color: #aaa !important;
     border-color: #aaa;
-    cursor: default;
-    text-shadow: none;
-    position: static;
     box-shadow: none;
+    color: #aaa !important;
+    cursor: default;
+    position: static;
+    text-shadow: none;
 }
 
 // Button Sizes
 .button-xlarge { font-size: 1.5em; }
 .button-large { font-size: 1.2857em; }
-.button-small { font-size: 0.8571em; }
-.button-xsmall { font-size: 0.7143em; }
+.button-small { font-size: .8571em; }
+.button-xsmall { font-size: .7143em; }

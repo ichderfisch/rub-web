@@ -7,122 +7,210 @@
   * | 20%     | flexible  | 20%     |
   * |-------------------------------|
   */
+#col1 {
+    float: left;
+    width: 25%;
+}
 
-  #col1 { float:left; width:25%; }
-  #col2 { float:right; width:25%; }
-  #col3 { width:auto; margin:0 20%; }
+#col2 {
+    float: right;
+    width: 25%;
+}
 
-  /* (en) Preparation for absolute positioning within content columns */
-  /* (de) Vorbereitung für absolute Positionierungen innerhalb der Inhaltsspalten */
-  #col1_content, #col2_content, #col3_content { position:relative; }
+#col3 {
+    margin: 0 20%;
+    width: auto;
+}
 
- /*------------------------------------------------------------------------------------------------------*/
+/* (en) Preparation for absolute positioning within content columns */
+/* (de) Vorbereitung für absolute Positionierungen innerhalb der Inhaltsspalten */
+#col1_content,
+#col2_content,
+#col3_content {
+    position: relative;
+}
 
- /**
+/*------------------------------------------------------------------------------------------------------*/
+/**
   * @section subtemplates
   * @see     http://www.yaml.de/en/documentation/practice/subtemplates.html
   */
-  .subcolumns { display:table; width:100%; table-layout:fixed; }
-  .subcolumns_oldgecko { width: 100%; float:left; }
+.subcolumns {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
 
-  .c20l, .c25l, .c33l, .c40l, .c38l, .c50l, .c60l, .c62l, .c66l, .c75l, .c80l { float:left; }
-  .c20r, .c25r, .c33r, .c40r, .c38r, .c50r, .c60r, .c66r, .c62r, .c75r, .c80r { float:right; margin-left:-5px; }
+.c20l,
+.c25l,
+.c33l,
+.c38l,
+.c40l,
+.c50l,
+.c60l,
+.c62l,
+.c66l,
+.c75l,
+.c80l {
+    float: left;
+}
 
-  .c20l, .c20r { width:20%; }
-  .c40l, .c40r { width:40%; }
-  .c60l, .c60r { width:60%; }
-  .c80l, .c80r { width:80%; }
-  .c25l, .c25r { width:25%; }
-  .c33l, .c33r { width:33.333%; }
-  .c50l, .c50r { width:50%; }
-  .c66l, .c66r { width:66.666%; }
-  .c75l, .c75r { width:75%; }
-  .c38l, .c38r { width:38.2%; }
-  .c62l, .c62r { width:61.8%; }
+.c20r,
+.c25r,
+.c33r,
+.c38r,
+.c40r,
+.c50r,
+.c60r,
+.c62r,
+.c66r,
+.c75r,
+.c80r {
+    float: right;
+    margin-left: -5px;
+}
 
-  .subc  {
-    padding:0 0.5em;
-  }
-  .subcl {
-	  padding:0 1em 0 0;
-  }
-  .subcr { padding:0 0 0 1em; }
+.c20l,
+.c20r {
+    width: 20%;
+}
 
-  .equalize, .equalize .subcolumns { table-layout:fixed; }
+.c40l,
+.c40r {
+    width: 40%;
+}
 
-  .equalize > div {
-    display:table-cell;
-    float:none;
-    margin:0;
-    overflow:hidden;
-    vertical-align:top;
-  }
+.c60l,
+.c60r {
+    width: 60%;
+}
 
+.c80l,
+.c80r {
+    width: 80%;
+}
+
+.c25l,
+.c25r {
+    width: 25%;
+}
+
+.c33l,
+.c33r {
+    width: 33.333%;
+}
+
+.c50l,
+.c50r {
+    width: 50%;
+}
+
+.c66l,
+.c66r {
+    width: 66.666%;
+}
+
+.c75l,
+.c75r {
+    width: 75%;
+}
+
+.c38l,
+.c38r {
+    width: 38.2%;
+}
+
+.c62l,
+.c62r {
+    width: 61.8%;
+}
+
+.subc {
+    padding: 0 .5em;
+}
+
+.subcl {
+    padding: 0 1em 0 0;
+}
+
+.subcr {
+    padding: 0 0 0 1em;
+}
+
+.equalize,
+.equalize .subcolumns {
+    table-layout: fixed;
+}
+
+.equalize > div {
+    display: table-cell;
+    float: none;
+    margin: 0;
+    overflow: hidden;
+    vertical-align: top;
+}
 
 // Customizations
-
 .two-col-nav-aside {
-
     #col2 {
-        display:none
+        display: none;
     }
 
     #col3 {
-        margin: 0 0 0 25%
+        margin: 0 0 0 25%;
     }
 
     #col1_content {
-	    padding: 0 20px 0 10px
+        padding: 0 20px 0 10px;
     }
-
 }
 
 .two-col-margial {
     #col1 {
         float: right;
-        width: 25%
+        width: 25%;
     }
 
     #col2 {
-        display:none
+        display: none;
     }
 
     #col3 {
+        margin: 0 25% 0 0;
         width: auto;
-        margin: 0 25% 0 0
     }
 
     #col1_content {
-	    padding: 0 10px 0 20px
+        padding: 0 10px 0 20px;
     }
 }
 
 .three-col {
     #col1 {
         float: left;
+        margin: 0;
         width: 25%;
-        margin: 0
     }
 
     #col2 {
         float: right;
+        margin: 0;
         width: 25%;
-        margin:0
     }
 
     #col3 {
+        margin: 0 25%;
         width: auto;
-        margin: 0 25% 0 25%
     }
 
     #col1_content {
-        padding: 0 20px 0 10px
+        padding: 0 20px 0 10px;
     }
+
     #col2_content {
-        padding: 0 10px 0 20px
+        padding: 0 10px 0 20px;
     }
 }
-
 @media screen and (max-width: $screen-md) {
     /* Changing order to content first on mobile view using CSS-Flexbox */
     #main {
@@ -142,8 +230,8 @@
     .two-col-nav-aside #col1,
     .two-col-nav-aside #col2,
     .two-col-nav-aside #col3 {
-        float: none;
         display: block;
+        float: none;
         width: 100%;
     }
 
@@ -162,10 +250,10 @@
     .c50r,
     .c66l,
     .c66r {
-        float: none;
         display: block;
-        width: 100%;
+        float: none;
         margin: 0;
+        width: 100%;
     }
 
     .subc,

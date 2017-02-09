@@ -1,17 +1,17 @@
 #main {
-    a[href $='.pdf'],
+    .extern,
+    .link--deutsch,
+    .link--englisch,
+    .link--extern,
+    .popup,
+    .print,
     a[href $='.doc'],
     a[href $='.docx'],
+    a[href $='.pdf'],
     a[href $='.xls'],
     a[href $='.xlsx'],
     a[href $='.zip'],
-    .popup,
-    .print,
-    .link--extern,
-    a[href ^="mailto:"],
-    .link--englisch,
-    .link--deutsch,
-    .extern {
+    a[href ^='mailto:'] {
         padding-right: 1.5em;
         background-repeat: no-repeat;
         background-color: transparent;
@@ -19,72 +19,70 @@
     }
 
     a[href $='.pdf'] {
-        background-image: url(../images/icons/pdf.gif);
+        background-image: url('../images/icons/pdf.gif');
     }
 
     a[href $='.doc'],
     a[href $='.docx'] {
-        background-image: url(../images/icons/doc.gif);
+        background-image: url('../images/icons/doc.gif');
     }
 
     a[href $='.xls'],
     a[href $='.xlsx'] {
-        background-image: url(../images/icons/xls.gif);
+        background-image: url('../images/icons/xls.gif');
     }
 
     a[href $='.zip'] {
-        background-image: url(../images/icons/zip.gif);
+        background-image: url('../images/icons/zip.gif');
     }
 
     .popup {
-        background-image: url(../images/icons/popup.gif);
+        background-image: url('../images/icons/popup.gif');
     }
 
     .print {
-        background-image: url(../images/icons/print.gif);
+        background-image: url('../images/icons/print.gif');
     }
 
     .link--extern {
-        background-image: url(../images/icons/external.gif)
+        background-image: url('../images/icons/external.gif');
     }
 
-    a[href ^="mailto:"] {
-        background-image: url(../images/icons/mailtosw.gif);
+    a[href ^='mailto:'] {
+        background-image: url('../images/icons/mailtosw.gif');
     }
-
 }
-
 
 ul.liste_mit_typangaben a[href $='.html'] {
     padding-left: 1.5em;
-    background: transparent url(../images/icons/pfeil-gruen-klein.gif) no-repeat center left;
+    background: transparent url('../images/icons/pfeil-gruen-klein.gif') no-repeat center left;
 }
 
 .link--englisch {
-    background-image: url(../images/icons/fl_english.gif);
+    background-image: url('../images/icons/fl_english.gif');
 }
 
 .link--deutsch {
-    background-image: url(../images/icons/fl_deutsch.gif);
+    background-image: url('../images/icons/fl_deutsch.gif');
 }
 
 .link-extern-deutsch,
 .link-extern-englisch {
-    padding-right: 2.75em;
     background-color: transparent;
-    background-repeat: no-repeat;
     background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 2.75em;
 }
 
 .link-extern-englisch {
-   background-image: url(../images/icons/extern-englisch.gif);
+    background-image: url('../images/icons/extern-englisch.gif');
 }
 
 .link-extern-deutsch {
-   background-image: url(../images/icons/extern-deutsch.gif);
+    background-image: url('../images/icons/extern-deutsch.gif');
 }
 
 .link--weiterlesen {
-  	background:url(../images/navigation/pfeil-rechts2.gif) no-repeat center left;
-  	padding-left: 1.5em;
+    background: url('../images/navigation/pfeil-rechts2.gif') no-repeat center left;
+    padding-left: 1.5em;
 }

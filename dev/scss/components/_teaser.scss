@@ -1,20 +1,20 @@
-#teaser { 
-    clear:both; 
-    padding: 0 10px; 
-    margin: 10px 0; 
+#teaser {
+    clear: both;
+    margin: 10px 0;
+    padding: 0 10px;
 }
 
-.flagge-englisch-vor,
-.flagge-deutsch-vor {
-	background-position: 	left;
-	background-repeat:		no-repeat;
-	padding-left: 			1.5em;
+.flagge-deutsch-vor,
+.flagge-englisch-vor {
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 1.5em;
 }
 
 .flagge-englisch-vor {
-	background-image:		url(../images/icons/fl_english.gif);
+    background-image: url('../images/icons/fl_english.gif');
 }
 
 .flagge-deutsch-vor {
-	background-image:		url(../images/icons/fl_deutsch.gif);
+    background-image: url('../images/icons/fl_deutsch.gif');
 }

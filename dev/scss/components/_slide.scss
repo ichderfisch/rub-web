@@ -22,7 +22,7 @@
     position: relative;
     width: 700px;
 
-    .rub-slider-thema{
+    .rub-slider-thema {
         float: left;
         height: 300px;
         width: 700px;
@@ -30,14 +30,14 @@
 }
 
 #rub-slider_control {
-	height: 30px;
-	overflow: hidden;
-	position: absolute;
-	right: 5px;
-	text-align: right;
-	top: 270px;
-	width: 150px;
-	z-index: 100;
+    height: 30px;
+    overflow: hidden;
+    position: absolute;
+    right: 5px;
+    text-align: right;
+    top: 270px;
+    width: 150px;
+    z-index: 100;
 }
 
 #caption,
@@ -45,14 +45,14 @@
 #next,
 #pause,
 #play {
-  float: right;
+    float: right;
 }
 
 #prev,
 #next,
 #pause,
 #play {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #caption {
@@ -62,56 +62,56 @@
 }
 
 #prev {
-	border-left: 1px solid #333;
-	border-right: 1px solid #333;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
 }
 
 #pause {
-  border-right: 1px solid #333;
+    border-right: 1px solid #333;
 }
 
 #play {
-	border-right: 1px solid #333;
-  display: none;
+    border-right: 1px solid #333;
+    display: none;
 }
 
 .rub-slider_overlay {
-	background: none repeat scroll 0 0 #000000;
-	left: 0;
-	filter: alpha(opacity=50);
-	opacity: .5;
-	overflow: hidden;
-	padding: 0 10px;
-	position: absolute;
-	width: 680px;
-	z-index: 10;
-  height: 30px;
-  top: 270px;
+    background: none repeat scroll 0 0 #000;
+    filter: alpha(opacity=50);
+    height: 30px;
+    left: 0;
+    opacity: .5;
+    overflow: hidden;
+    padding: 0 10px;
+    position: absolute;
+    top: 270px;
+    width: 680px;
+    z-index: 10;
 }
 
 .rub-slider_text {
-	color: #F0F0F0;
-	left: 0px;
-	position: absolute;
-	width: 700px;
-	z-index: 100;
-	top: 270px;
-	height: 30px;
-	font-size:95%;
+    color: #f0f0f0;
+    font-size: 95%;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 270px;
+    width: 700px;
+    z-index: 100;
 
-  p {
-   margin: 0;
-   padding:6px 0 0 10px;
-  }
+    p {
+        margin: 0;
+        padding: 6px 0 0 10px;
+    }
 
-  a:link,
-  a:visited {
-  	color: #F0F0F0;
-  	text-decoration: underline;
-  }
+    a:link,
+    a:visited {
+        color: #f0f0f0;
+        text-decoration: underline;
+    }
 
-  a:hover {
-  	color: #F0F0F0;
-  	text-decoration: underline;
-  }
+    a:hover {
+        color: #f0f0f0;
+        text-decoration: underline;
+    }
 }

@@ -1,11 +1,11 @@
 #topnav {
-	position:absolute;
-	top:0px;
-	right:-30px;
-	text-align:right;
-	color: #aaa;
-	background: transparent;
-	z-index:9999
+    background: transparent;
+    color: #aaa;
+    position: absolute;
+    right: -30px;
+    text-align: right;
+    top: 0;
+    z-index: 9999;
 }
 
 #topnav img.logo {
@@ -20,12 +20,12 @@
     list-style-type: none;
 
     > li {
-        display: inline-block;
         border-right: 1px solid #aaa;
-        padding-right: 0.3em;
-        padding-left: 0.3em;
-        margin-left: 0;
+        display: inline-block;
         line-height: 1em;
+        margin-left: 0;
+        padding-left: .3em;
+        padding-right: .3em;
 
         &:last-child {
             border-right: 0;
@@ -34,8 +34,8 @@
 
     a:link,
     a:visited {
-        color: #5C5C5C;
-        font-size: 0.9em;
+        color: #5c5c5c;
+        font-size: .9em;
         font-weight: bold;
         letter-spacing: 1px;
         text-decoration: none;
@@ -60,16 +60,16 @@
     }
 
     #uninavi {
+        display: none;
         left: 10px;
         position: absolute;
-        display: none;
     }
 }
 
 @media screen and (max-width: $screen-xs) {
     #topnav img.logo {
-        width: 50px;
         height: 50px;
+        width: 50px;
     }
 
     #topnav .logo {
