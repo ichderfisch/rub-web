@@ -1,0 +1,75 @@
+.current-nav {
+    background: $white;
+}
+
+.current-nav__list {
+    border-bottom: 1px solid #ccc;
+    border-top: 2px solid $rub-green;
+    list-style: none;
+    margin: 0 0 1.5em;
+    padding-left: 0;
+}
+
+.current-nav__item {
+    margin: 0;
+    position: relative;
+}
+
+.current-nav__link {
+
+    &,
+    &:focus,
+    &:visited {
+        background-image: url('../images/navigation/pfeil-rechts2.gif');
+        background-position: .25em 50%;
+        background-repeat: no-repeat;
+        border-top: 1px solid #ccc;
+        color: $rub-blue;
+        display: block;
+        padding: .25em .25em .25em 1em;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: $white-green;
+        text-decoration: none;
+    }
+
+    &--current {
+        background-color: $white-green;
+        font-weight: bold;
+    }
+}
+
+.current-nav__header {
+    border-top: 2px solid $rub-green;
+    color: $rub-blue;
+    font-weight: normal;
+    padding: .3125em 0 .625em;
+}
+
+// .current-nav {
+//  ul {
+//     ul {
+//         background-color: $white;
+//         border-bottom: 0;
+//         border-top: 0;
+//         list-style: none;
+//         margin: 0;
+//
+//         li a {
+//             margin-left: .75em;
+//         }
+//
+//         ul li a {
+//             margin-left: 1.5em;
+//         }
+//     }
+//   }
+// }
+
+@media screen and (max-width: $screen-md) {
+    .current-nav {
+        display: none;
+    }
+}

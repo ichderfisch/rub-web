@@ -1,3 +1,16 @@
+#nav {
+    background-color: $rub-green;
+    border-bottom: 1px solid #f3f3f3;
+    min-height: 2.3em;
+	overflow: visible;
+	z-index: 999;
+
+    ul {
+        margin-left: 0px;
+    }
+
+}
+
 /*** RUB Hauptnavigation quer
     'grüne Leiste'
  ***/

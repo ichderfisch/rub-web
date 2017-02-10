@@ -1,8 +1,9 @@
 // Global
-@import 'reset';
+@import 'normalize';
 @import 'variables';
 @import 'base';
 @import 'globals';
+
 // Components
 @import 'components/alerts';
 @import 'components/angebote';
@@ -14,9 +15,8 @@
 @import 'components/grid';
 @import 'components/header';
 @import 'components/icons';
-@import 'components/nav';
-@import 'components/nav-aside';
-@import 'components/nav-top';
+@import 'components/nav-current';
+@import 'components/nav-global';
 @import 'components/skip';
 @import 'components/slide';
 @import 'components/teaser';

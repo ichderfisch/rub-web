@@ -22,12 +22,11 @@ html.no-js(lang="de")
                     .subcolumns
                         .c75l
                             .subcl
-                                ol#breadcrumbs
-                                    li
-                                        a(href="http://www.ruhr-uni-bochum.de/" title="Startseite der Ruhr-Universität Bochum") RUB
-                                        |  &raquo;
-                                    li
-                                        a.current Ihre Startseite
+                                ul.breadcrumbs
+                                    li.breadcrumbs__item
+                                        a.breadcrumbs__link(href="http://www.ruhr-uni-bochum.de/" title="Startseite der Ruhr-Universität Bochum") RUB
+                                    li.breadcrumbs__item.breadcrumbs__item--current
+                                        span Ihre Startseite
                         .c25r
                             .subcr
                                 #sprache
@@ -37,7 +36,7 @@ html.no-js(lang="de")
                     #inhalt
                         #col1
                             #con1_content.clearfix
-                                #seitennavigation
+                                .current-nav
                                     block nav
 
                         #col3

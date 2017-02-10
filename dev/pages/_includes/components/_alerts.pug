@@ -1,0 +1,15 @@
+//- --------------------------------
+//- ALERTS
+//- --------------------------------
+
+mixin alert(status)
+    case status
+        when "note"
+            .alert.alert__note
+                block
+        when "important"
+            .alert.alert__important
+                block
+        when "warning"
+            .alert.alert__warning
+                block
