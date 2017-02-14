@@ -14,7 +14,7 @@
     cursor: pointer;
     display: inline-block;
     font: normal 1em/2em Arial, sans-serif;
-    margin: .5em .25em 0 0;
+    margin: 0 .25em 0 0;
     overflow: visible; /* removes extra side spacing in IE */
     padding: 0 .5em;
     text-decoration: none !important;
@@ -54,34 +54,36 @@
         text-align: center;
         width: 1em;
     }
+
+    [disabled],
+    [disabled]:hover {
+        background: #eee;
+        border-color: #aaa;
+        box-shadow: none;
+        color: #aaa;
+        cursor: default;
+        position: static;
+        text-shadow: none;
+    }
+
+    &--add::before { content: '\271A'; }
+    &--delete::before { content: '\2718'; }
+    &--edit::before { content: '\270E'; }
+    &--email::before { content: '\2709'; }
+    &--like::before { content: '\2764'; }
+    &--next::before { content: '\279C'; }
+    &--previous::before { content: '\2190'; }
+    &--play::before { content: '\25B6'; }
+    &--save::before { content: '\2714'; }
+    &--spark::before { content: '\2737'; }
+    &--star::before { content: '\2605'; }
+
+    &--xl { font-size: 1.5em; }
+    &--la { font-size: 1.2857em; }
+    &--sm { font-size: .8571em; }
+    &--xs { font-size: .7143em; }
 }
 
-.button-add::before { content: '\271A'; }
-.button-delete::before { content: '\2718'; }
-.button-edit::before { content: '\270E'; }
-.button-email::before { content: '\2709'; }
-.button-like::before { content: '\2764'; }
-.button-next::before { content: '\279C'; }
-.button-previous::before { content: '\2190'; }
-.button-play::before { content: '\25B6'; }
-.button-save::before { content: '\2714'; }
-.button-spark::before { content: '\2737'; }
-.button-star::before { content: '\2605'; }
 
-// Button Disabled
-.button[disabled],
-.button[disabled]:hover {
-    background: #eee;
-    border-color: #aaa;
-    box-shadow: none;
-    color: #aaa !important;
-    cursor: default;
-    position: static;
-    text-shadow: none;
-}
 
 // Button Sizes
-.button-xlarge { font-size: 1.5em; }
-.button-large { font-size: 1.2857em; }
-.button-small { font-size: .8571em; }
-.button-xsmall { font-size: .7143em; }
