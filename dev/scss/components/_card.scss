@@ -1,0 +1,82 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+/**
+ * Card: Basic Layout
+ **/
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ececec;
+    box-shadow: 0 6px 10px -5px rgba(0, 0, 0, .2)
+    display: flex;
+    flex: 0 0 27.5em;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2em;
+
+    &__title {
+        color: $rub-blue;
+        font-size: $font-size-la;
+        font-weight: bold;
+        margin-bottom: .5em;
+        margin-top: 0;
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__body {
+        padding: 1.5em 2em;
+    }
+
+    &__teaser {
+        line-height: 1.5;
+        margin-bottom: 0;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__list-item {
+        margin-left: 1em;
+    }
+
+    &__footer {
+        background-color: $white;
+        border-top: 1px solid #ececec;
+        padding: 1em 2em;
+        text-align: center;
+    }
+}
+
+/**
+ * Card: Small Layout
+ **/
+
+.card--small {
+    background-color: $white-green;
+    border-color: $light-green;
+    flex: 0 0 32%;
+
+    .card {
+        &__title {
+            font-size: $font-size-sm;
+        }
+    }
+
+    &__footer {
+        background-color: $white;
+        border-top: 1px solid #ececec;
+    }
+}

@@ -1,0 +1,17 @@
+//- --------------------------------
+//- CARD
+//- --------------------------------
+
+mixin cards()
+    section.cards&attributes(attributes)
+        block
+
+mixin card()
+    article.card&attributes(attributes)
+        block
+
+mixin card-title(title)
+    h4.card__title= title
+
+mixin card-teaser(teaser)
+    p.card__teaser= teaser

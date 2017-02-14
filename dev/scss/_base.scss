@@ -1,7 +1,5 @@
 html {
-    * {
-        font-size: 100.01%;
-    }
+    font-size: 16px;
 }
 
 body {
@@ -126,16 +124,6 @@ acronym {
     cursor: help;
     font-variant: small-caps;
     letter-spacing: .07em;
-}
-
-sub {
-    vertical-align: sub;
-    font-size: smaller;
-}
-
-sup {
-    vertical-align: super;
-    font-size: smaller;
 }
 
 hr {
