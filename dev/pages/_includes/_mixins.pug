@@ -21,7 +21,7 @@ mixin item()
 
 //- Image
 mixin image(filename, addClass, alt, width, height)
-    img(src=(filename) class=(addClass) alt=(alt) width=(width) height=(height))
+    img(src=(filename) alt=(alt) width=(width) height=(height))&attributes(attributes)
 
 
 //- --------------------------------

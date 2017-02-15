@@ -1,8 +1,8 @@
-header#header
+header.header.header--wide
     a(href="http://www.ruhr-uni-bochum.de")
         img(src="images/logos/rub-schriftzug.gif" alt="Ruhr-Universität Bochum Wortmarke" name="schriftzug" width="247" height="18" id="schriftzug" style="margin-bottom: 15px;")
 
-    #topnav
+    .topnav
         // start: skip link
         a.skip(title="skip link" href="#navigation") Skip to the navigation
         a.skip(title="skip link" href="#rub-inhalt") Skip to the content
@@ -10,9 +10,9 @@ header#header
         // end: skip link
 
         a(title="Startseite der RUB" href="http://www.rub.de")
-            +image("images/logos/logo-rub-102.gif", "logo", "Ruhr-Universität Bochum", 102, 102 )
+            +image("images/logos/logo-rub-102.gif", "Ruhr-Universität Bochum", 102, 102 ).topnav__logo
 
-        +list#uninavi
+        +list.uninavi
             +item
                 a(title="Startseite der RUB" href="http://www.rub.de") Startseite
             +item
@@ -23,10 +23,10 @@ header#header
                 a(title="Stichwortverzeichnis der RUB" href="http://www.ruhr-uni-bochum.de/a-z/") A-Z
 
     .subcolumns
-        .c25l.aside
+        .c25l.header__aside
             //- Seitentitel dynamisch aus _metadata.json beziehen.
-            h2= title
-            p= description
+            h1.header__title= title
+            p.header__text= description
 
-        .c75r.content
+        .c75r.header__image
             +image("images/hp/bild007.jpg", "", "700")

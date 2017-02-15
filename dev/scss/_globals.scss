@@ -3,39 +3,18 @@ body {
     padding: 0 0 10px 0;
 }
 
-.page_margins {
-    background: $white;
-    border: 0 none;
-    box-shadow: 0 0 10px $black;
-    margin: 0 auto;
-    width: 960px;
-}
-
 #main {
     background: $white;
     margin: 10px 0;
     z-index: 99;
 }
 
-#inhalt {
-    margin: 0 10px;
-
-    h2 {
-        border-top: 2px solid $rub-blue;
-        color: $font-color;
-        font-weight: normal;
-        padding: .3125em 0 .625em;
-    }
-
-    h3 {
-        font-weight: normal;
-    }
-}
-
 .page {
-    border: 0 none;
-    // margin: 0 0 0 5px;
-    // padding: 0px 5px 10px 0px;
+    background: $white;
+    border: 0;
+    box-shadow: 0 0 10px $black;
+    margin: 0 auto;
+    width: 960px;
 }
 
 #ueberschrift {
@@ -53,7 +32,7 @@ body {
 }
 
 @media screen and (max-width: $screen-xl) {
-    .page_margins {
+    .page {
         max-width: 100%;
     }
 }

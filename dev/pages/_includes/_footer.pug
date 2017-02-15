@@ -1,5 +1,5 @@
-footer#footer
-    .subcloumns#linkleiste
+footer.footer
+    main.footer__main.subcloumns
         .c25l
             .subcl
                 a(href="href=http://www.ruhr-uni-bochum.de")
@@ -14,46 +14,44 @@ footer#footer
                 a(href="http://www.ruhr-uni-bochum.de/kontakt") Kontakt RUB
         .c25l
             .subc
-                h6 Forschung und Lehre
-                ul
-                  li
-                    a(href="http://www.ruhr-uni-bochum.de/universitaet/fakultaeten/index.html") Fakultäten
-                  li
-                    a(href="http://studienangebot.rub.de/") Studienangebot der RUB
-                  li
-                    a(href="http://www.rd.ruhr-uni-bochum.de/") Research Departments
-                  li
-                    a(href="http://www.research-school.ruhr-uni-bochum.de/") Research School
-                  li
-                    a(href="http://www.ruhr-uni-bochum.de/solvation/") Exzellenzcluster RESOLV
+                h3.footer__title Forschung und Lehre
+                +list
+                    +item
+                        a(href="http://www.ruhr-uni-bochum.de/universitaet/fakultaeten/index.html") Fakultäten
+                    +item
+                        a(href="http://studienangebot.rub.de/") Studienangebot der RUB
+                    +item
+                        a(href="http://www.rd.ruhr-uni-bochum.de/") Research Departments
+                    +item
+                        a(href="http://www.research-school.ruhr-uni-bochum.de/") Research School
+                    +item
+                        a(href="http://www.ruhr-uni-bochum.de/solvation/") Exzellenzcluster RESOLV
         .c25l
             .subc
-                h6 Portale
-                ul
-                    li
+                h3.footer__title Portale
+                +list
+                    +item
                         a(href="http://aktuell.ruhr-uni-bochum.de/") Aktuell
-                    li
+                    +item
                         a(href="http://www.ruhr-uni-bochum.de/berufungsportal") Berufung
-                    li
+                    +item
                         a(href="http://www.ub.ruhr-uni-bochum.de/") Bibliothek
-                    li
+                    +item
                         a(href="http://www.ruhr-uni-bochum.de/chancengleich/") Chancengleich
-                    li
+                    +item
                         a(href="http://international.ruhr-uni-bochum.de/") International
         .c25r
             .subcr
-                h6 Soziale Netzwerke
+                h3.footer__title Soziale Netzwerke
                 include _social
 
-    .subcolumns
+    footer.footer__footer.subcolumns
         .c50l
             .subcl
                 #ansprechpartner
-                    span Letzte Änderung: 01.01.1970 |
-                    a(href="http://www.ruhr-uni-bochum.de/impressum.htm" title="Impressum Ruhr-Universität Bochum") Impressum
-                    span |
-                    a(href="mailto:webteam@presse.ruhr-uni-bochum.de" title="Email Inhalt") Inhalt
-                    span |
+                    span Letzte Änderung: 01.01.1970 |&nbsp;
+                    a(href="http://www.ruhr-uni-bochum.de/impressum.htm" title="Impressum Ruhr-Universität Bochum") Impressum |&nbsp;
+                    a(href="mailto:webteam@presse.ruhr-uni-bochum.de" title="Email Inhalt") Inhalt |&nbsp;
                     a(href="mailto:webmaster@ruhr-uni-bochum.de" title="Email Webmaster") Technik
         .c50r
             .subcr

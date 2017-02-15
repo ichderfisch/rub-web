@@ -1,4 +1,4 @@
-#topnav {
+.topnav {
     background: transparent;
     color: #aaa;
     position: absolute;
@@ -6,20 +6,20 @@
     text-align: right;
     top: 0;
     z-index: 9999;
+
+    &__logo {
+        float: right;
+        margin-left: 20px;
+        width: 102px;
+    }
 }
 
-#topnav img.logo {
-    float: right;
-    margin-left: 20px;
-    width: 102px;
-}
-
-#uninavi {
-    line-height: 4em;
+.uninavi {
     display: inline;
+    line-height: 4em;
     list-style-type: none;
 
-    > li {
+    > .list__item {
         border-right: 1px solid #aaa;
         display: inline-block;
         line-height: 1em;
@@ -32,34 +32,36 @@
         }
     }
 
-    a:link,
-    a:visited {
-        color: #5c5c5c;
-        font-size: .9em;
-        font-weight: bold;
-        letter-spacing: 1px;
-        text-decoration: none;
-        text-transform: uppercase;
+    a {
+        &:link,
+        &:visited {
+            color: #5c5c5c;
+            font-size: .9em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
     }
 }
 
 @media screen and (max-width: $screen-xl) {
-    #topnav {
+    .topnav {
         right: 0;
     }
 }
 
 @media screen and (max-width: $screen-md) {
-    #topnav {
+    .topnav {
         top: 35px;
         width: 100%;
 
-        img.logo {
+        &__logo {
             margin-top: -35px;
         }
     }
 
-    #uninavi {
+    .uninavi {
         display: none;
         left: 10px;
         position: absolute;
@@ -67,12 +69,7 @@
 }
 
 @media screen and (max-width: $screen-xs) {
-    #topnav img.logo {
-        height: 50px;
-        width: 50px;
-    }
-
-    #topnav .logo {
+    .topnav__logo {
         display: none;
     }
 }

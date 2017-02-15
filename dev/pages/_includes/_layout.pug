@@ -10,39 +10,38 @@ html.no-js(lang="de")
     include _head
 
     body.two-col-nav-aside
-        .page_margins
-            .page
+        .page
 
-                include _header
+            include _header
 
-                //-#nav
-                    // TODO
+            //-#nav
+                // TODO
 
-                #teaser
-                    .subcolumns
-                        .c75l
-                            .subcl
-                                ul.breadcrumbs
-                                    li.breadcrumbs__item
-                                        a.breadcrumbs__link(href="http://www.ruhr-uni-bochum.de/" title="Startseite der Ruhr-Universität Bochum") RUB
-                                    li.breadcrumbs__item.breadcrumbs__item--current
-                                        span Ihre Startseite
-                        .c25r
-                            .subcr
-                                #sprache
-                                    a.flagge-englisch-vor(href="#") Englisch
+            #teaser
+                .subcolumns
+                    .c75l
+                        .subcl
+                            ul.breadcrumbs
+                                li.breadcrumbs__item
+                                    a.breadcrumbs__link(href="http://www.ruhr-uni-bochum.de/" title="Startseite der Ruhr-Universität Bochum") RUB
+                                li.breadcrumbs__item.breadcrumbs__item--current
+                                    span Ihre Startseite
+                    .c25r
+                        .subcr
+                            #sprache
+                                a.flagge-englisch-vor(href="#") Englisch
 
-                main#main
-                    #col1
-                        #col1_content.clearfix
-                            .current-nav
-                                block nav
+            main#main
+                #col1
+                    #col1_content.clearfix
+                        .current-nav
+                            block nav
 
-                    #col3
-                        #col3_content.clearfix
-                            #inhalt
-                                block main
+                #col3
+                    #col3_content.clearfix
+                        #inhalt
+                            block main
 
-                include _footer
+            include _footer
 
         script(type="text/javascript" src="./js/scripts.js")

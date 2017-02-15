@@ -1,44 +1,21 @@
-#header {
+.header {
     background-color: $white;
     background-image: url('../images/backgrounds/bg-oben-unterseite-grau136.gif');
     background-repeat: repeat-x;
     color: $black;
     padding: 20px 0 0 0;
-    position: relative;
 
-    .aside {
-        background-color: #ececec;
-        height: 280px;
-        padding: 10px;
-        width: 240px;
-    }
-
-    .content {
-        background-color: #ececec;
-        width: 700px;
-    }
-
-    h1 {
-        color: #709108;
+    &__title {
+        color: $rub-green;
         font-size: 200%;
         font-weight: bold;
         padding: 10px 0 10px 10px;
         text-transform: uppercase;
     }
 
-    h2 {
+    &__subtitle {
         font-weight: normal;
         margin-bottom: 1em;
-    }
-
-    h6 {
-        background-color: #f0f0f0;
-        border-top: 1px solid #ccc;
-        color: $rub-blue;
-        font-size: 100%;
-        font-weight: bold;
-        letter-spacing: 1px;
-        padding: 3px 10px 2px 10px;
     }
 
     #schriftzug {
@@ -46,6 +23,30 @@
     }
 }
 
-.one-col #header .subcolumns {
-    background-color: #ececec;
+.header--wide {
+    background-color: $white;
+    color: $black;
+    padding: 20px 0 0 0;
+    position: relative;
+
+    .header__aside {
+        background-color: #ececec;
+        height: calc(280px + 20px - 2em);
+        padding: 1em 10px;
+        width: 240px;
+    }
+
+    .header__image {
+        background-color: #ececec;
+        width: 700px;
+    }
+
+    .header__title {
+        color: $rub-blue;
+        font-size: 1.5em;
+        font-weight: normal;
+        margin-bottom: 1em;
+        padding: 0;
+        text-transform: none;
+    }
 }
